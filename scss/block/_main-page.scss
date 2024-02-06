@@ -1,6 +1,6 @@
 .main-page {
-    &__contant {
-        margin-top: 68px auto;
+    &__content {
+        margin: 73px auto 0;
         width: 1030px;
     }
 
@@ -8,7 +8,6 @@
         font-size: 60px;
         font-weight: 700;
         font-family: "Orbitron", sans-serif;
-
     }
 
     &__title-accent {
@@ -17,16 +16,85 @@
     }
 
     &__support-title {
+        margin-top: 20px;
         font-size: 30px;
         font-weight: 600;
         font-family: 'Raleway';
     }
 
     &__block-text {
-        font-size: 30px;
-        font-weight: 600;
+        color: $accentuatingColor;
+        background: $blockBlackBackground;
+        width: 352px;
+        padding: 12px;
+        margin: 20px auto 42px;
+        font-size: 25px;
+        font-weight: 500;
         font-family: 'Raleway';
+        border-radius: 20px;
+        box-shadow: 0 4px 15px 0 $boxShadow;
     }
-
 }
 
+@include breakpoints(xl) {
+    .main-page {
+        &__content {
+            width: 95%;
+        }
+    
+        &__title {
+           width: 95%;
+    
+        }
+    }
+}
+
+
+@include breakpoints (md) {
+    .main-page {
+        &__content {
+            width: 80%;
+            margin: 30px auto 0;
+        }
+    
+        &__title {
+            font-size: 30px;
+        }
+    
+        &__title-accent {
+            font-size: 40px;
+        }
+    
+        &__support-title {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+    
+        &__block-text {
+            width: 226px;
+            padding: 12px 0;
+            margin: 26px auto 42px;
+            font-size: 15px;
+        }
+    }  
+}
+
+@include breakpoints(sm) {
+    .main-page{
+        &__content {
+            width: 95%;
+        }
+    
+        &__support-title {
+            margin-top: 8px;
+            font-size: 15px;
+        }
+    
+        &__block-text {
+            width: 180px;
+            padding: 12px 0;
+            margin: 16px auto 35px;
+            font-size: 13px;
+        }
+    }
+}
