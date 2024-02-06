@@ -1,0 +1,61 @@
+// /* Orbitron */
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Orbitron';
+    font-weight: 700;
+    src: url('../fonts/Orbitron-Black.woff2') format('woff2'),
+    url('../fonts/Orbitron-Black.woff') format('woff'), 
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Orbitron';
+    font-weight: 500;
+    src: url('../fonts/Orbitron-Medium.woff2') format('woff2'), 
+    url('../fonts/Orbitron-Medium.woff') format('woff'), 
+}
+
+/* Raleway */
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Raleway';
+    font-weight: 400;
+    src: url('../fonts/Raleway-Regular.woff2') format('woff2'), 
+    url('../fonts/Raleway-Regular.woff') format('woff'), 
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Raleway';
+    font-weight: 500;
+    src: url('../fonts/Raleway-Medium.woff2') format('woff2'), 
+    url('../fonts/Raleway-Medium.woff') format('woff'), 
+}
+
+/* Raleway-500italic */
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Raleway';
+    font-weight: 500;
+    src: url('../fonts/Raleway-MediumItalic.woff2') format('woff2'),
+    url('../fonts/Raleway-MediumItalic.woff') format('woff'), 
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-weight: 600;
+    src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+    url('../fonts/Raleway-SemiBold.woff') format('woff'), 
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-weight: 700;
+    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+    url('../fonts/Raleway-Bold.woff') format('woff'), 
+}

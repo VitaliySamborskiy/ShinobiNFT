@@ -1,0 +1,86 @@
+@import './color';
+@import './fonts';
+@import './breakpoints';
+@import './block/header';
+@import'./block/main-page';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $mainBackground;
+    color: $mainTextColor;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: $mainTitle;
+    font-size: 75px;
+    font-weight: 700;
+    font-family: 'Orbitron';
+}
+
+a {
+    color: $mainTitle;
+    transition: color 0.5s ease-in-out;
+}
+
+a:hover {
+    color: $colorText;
+}
+
+.button-section {
+}
+.button-section__block {
+}
+
+.button-section__registration {
+}
+
+.button-section__bottom-button {
+}
+
+@include breakpoints(xxl) {
+    .container-xxl {
+        max-width: 1200px;
+        padding: 0 3px;
+    } 
+}
+
+@include breakpoints(xl) {
+    .container-xl {
+        max-width: 80%;
+        min-width: 1000px;
+        padding: 0 3px;
+    }  
+}
+
+@include breakpoints(md) {
+    .container-md {
+        max-width: 90%;
+        min-width: 768px;
+        padding: 0 30px;
+    }
+}
+
+@include breakpoints(sm) {
+    .container-sm {
+        max-width: 90%;
+        min-width: 375px;
+        padding: 0 25px;
+    }
+}

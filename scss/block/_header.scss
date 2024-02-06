@@ -1,0 +1,57 @@
+.header {
+    &__block {
+        width: 1176px;
+        margin: 17px auto 0;
+    }
+    &__items {
+        width: 669px;
+    }
+    &__item {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    &__button {
+        padding: 8px 47px;
+        color: $colorText;
+        border-radius: 50px;
+        font-size: 22px;
+        font-weight: 600;
+        // font-family: "Orbitron", sans-serif;
+        border: 1px solid $colorText;
+        transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+    }
+
+    &__button:hover {
+        background: $accentuatingColor;
+        color: $blockBackground;
+    }
+}
+
+@include breakpoints(xl) {
+    .header{
+        &__block {
+            width: 100%;
+        }
+
+        &__items {
+            width: 55%;
+        }
+
+        &__button {
+            padding: 8px 37px;
+        }
+    }
+}
+
+@include breakpoints(md) {
+    .header{
+        &__items {
+            display: none;
+        }
+
+        &__button {
+            display: none;
+        }
+    }
+}
