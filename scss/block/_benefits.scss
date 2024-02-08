@@ -1,0 +1,233 @@
+.benefits {
+    &__container {
+        margin-top: 114px;
+        width: 88.5%;
+    }
+
+    &__img-partner {
+        position: absolute;
+        top: -46px;
+        left: 463px;
+        transform: translateZ(0);
+        z-index: -1;
+    }
+
+    &__text-content {
+        margin-top: 180px;
+    }
+
+    &__img {
+        position: relative;
+    }
+
+    &__img-shinobi {
+        margin-left: 20px;
+    }
+
+    &__text-title {
+        margin-left: 43px;
+        font-size: 90px;
+        font-weight: 700;
+    }
+
+    &__text-block {
+        margin-top: 36px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    &__text-area {
+        text-align: right;
+        width: 450px;
+        gap: 21px;
+        line-height: 1.2;
+    }
+
+    &__text-white {
+        color: $mainTitle;
+    }
+
+    &__text-svg {
+        margin: 10px 0 0 30px;
+        gap: 70px;
+    }
+
+    &__svg {
+        width: 47px;
+        height: 30px;
+    }
+
+    &__button {
+        margin: 0 !important;
+    }
+}
+
+@include breakpoints(xxl) {
+    .benefits-xxl {
+        max-width: 1595px;
+        padding: 0 3px;
+    } 
+}
+
+@include breakpoints (xl) {
+    .benefits {
+        &__container {
+            margin-top: 100px;
+            width: 100%;
+        }
+    
+        &__img-partner {
+            left: 48%;
+            width: 50%;
+        }
+
+        &__img-shinobi {
+            margin: 0;
+            width: 100%;
+            min-width: 550px;
+        }
+    
+        &__text-content {
+            margin-top: 120px;
+        }
+    
+        &__text-title {
+            margin: 0 60px 0 0;
+            text-align: end;
+            font-size: 80px;
+        }
+    
+        &__text-block {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+    
+        &__text-area {
+            width: 100%;
+            min-width: 390px;
+            gap: 19px;
+        }
+    
+        &__text-svg {
+            margin: 5px 0 0 25px;
+            gap: 69px;
+        }
+    
+        &__svg {
+            width: 40px;
+        }
+    }
+}
+
+@include breakpoints(md) {
+    .benefits {
+        &__container {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax( 440px, 1fr));
+            margin-top: 97px;
+        }
+    
+        &__img-partner {
+            left: 54%;
+            width: 58%;
+        }
+    
+        &__text-content {
+            margin: 48px auto 0;
+            width: 100%;
+            max-width: 480px ;
+        }
+
+        &__img {
+            margin: 0 auto;
+        }
+    
+        &__img-shinobi {
+            max-width: 500px;
+            width: 100%;
+            min-width: 300px;
+        }
+    
+        &__text-title {
+            margin-right: 0;
+            margin-left: 18%;
+            text-align: left;
+            font-size: 35px;
+        }
+    
+        &__text-block {
+            margin: 21px 0 0 15px;
+            font-size: 15px;
+            flex-direction: row-reverse;
+        }
+    
+        &__text-area {
+            text-align: left;
+            width: 70%;
+            min-width: 390px;
+            gap: 21px;
+        }
+    
+        &__text-svg {
+            margin: 5px 11px 0 0;
+            gap: 65px;
+        }
+    
+        &__svg {
+            width: 38px;
+            height: 20px;
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+@include breakpoints(sm) {
+    .benefits {
+        &__container {
+            grid-template-columns: repeat(auto-fill, minmax( 100%, 1fr));
+            margin-top: 47px;
+        }
+    
+        &__img-partner {
+            top: -49px;
+            left: 50%;
+            width: 63%;
+        }
+
+        &__img {
+            margin: 0 auto;
+        }
+    
+        &__img-shinobi {
+            margin-left: 15px;
+            width: 95%;
+        }
+    
+        &__text-title {
+            margin-left: 10%;
+        }
+    
+        &__text-block {
+            margin: 21px 0 0 0;
+            width: 100%;
+        }
+    
+        &__text-area {
+            width: 100%;
+            min-width: 270px;
+            gap: 8px;
+        }
+    
+        &__text-svg {
+            margin: 8px 11px 20px 0;
+            gap: 0px;
+            min-height: 100%;
+            justify-content: space-between;
+        }
+    
+        &__svg {
+            width: 37px;
+            height: 20px;
+        }
+    }
+}

@@ -39,16 +39,16 @@
     &__body-svg {
         width: 61px;
         height: 34px;
-        margin-bottom: 30px;
+        margin-bottom: 37px;
     }
 
     &__body-block {
         background: $blockBlackFill;
-        padding: 12px 34px;
+        padding: 5px 32px;
         font-weight: 700;
         font-size: 40px;
         border-radius: 20px;
-        margin-bottom: 35px;
+        margin-bottom: 42px;
         box-shadow: 0 4px 15px 0 $boxShadow;
     }
 }
@@ -57,7 +57,8 @@
     .section-two {    
         &__header {
             margin-left: 70px;
-            width: 85%;      
+            width: 75%;
+            min-width: 820px;      
         }
     
         &__header-title {
@@ -96,6 +97,7 @@
             margin: 0 auto;
             flex-wrap: wrap;
             width: 60%;
+            min-width: 0; 
         }
     
         &__header-title {
