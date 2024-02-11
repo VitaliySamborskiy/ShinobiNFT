@@ -15,6 +15,7 @@
 
     &__block {
         position: relative;
+        width: 100%;
         margin-top: 113px;
     }
 
@@ -73,13 +74,14 @@
 
     &__container-item_active {
         height: 100%;
-        width: 305px;
+        width: 300px;
         opacity: 1;
         overflow: visible;
     }
 
     &__container-text {
         font-size: 22px;
+        margin: 0;
     }
 
     &__white {
@@ -157,17 +159,17 @@
         }
 
         &__vertical-line {
-            margin: 68px 0 0 60px;
+            margin: 38px 0 0 60px;
             width: 1px;
-            height: 600px;
+            height: 551px;
             background: $notActive;
         }
     
         &__link-items {
             display: grid !important;
+            margin-left: 28px;
             padding: 0;
-            height: 551px;
-            width: 6%;
+            width: 50px;
             align-items: center;
             justify-content: space-between;
         }
@@ -177,36 +179,29 @@
         }  
     
         &__content {
-            display: grid !important;            
+            padding-left: 34px;
+            display: grid !important;
+            align-items: center;            
             width: 100%;
         }
     
         &__line-box {
-            width: 32px;
-            height: 32px;
-            top: 0;
-            left: 0;
-            transform: translate(-50%, -50%);
-            background: $mainTitle;
-            position: absolute;
+            width: 25px;
+            height: 25px;
+            top: 50%;
+            left: -113px;
         }
     
         &__container-item {
+            display: flex;
+            align-items: center;
             position: relative;
             width: 100%;
-            // height: 100px;
-            overflow: hidden;
-            opacity: 0;
-            transition: opacity 0.7s ease-in-out;
+            height: 75px;
         }
     
         &__container-item_active {
-            height: 100%;
-            max-width: 800px;
             width: 100%;
-            min-width: 450px;
-            opacity: 1;
-            overflow: visible;
         }
     
         &__container-text {
@@ -216,6 +211,48 @@
     
         &__white {
             font-size: 15px; 
+        }
+    }
+}
+
+@include breakpoints(sm) {
+    .tabs {
+        &__container {
+            margin-top: 188px;
+        }
+    
+        &__title {
+            margin:0 2px 0 30px;
+        }
+    
+        &__block {
+            margin-top: 10px;
+        }
+
+        &__vertical-line {
+            padding: 1px;
+            margin: 30px 0 0 28px;
+        }
+    
+        &__link-items {
+            margin-left: 18px;
+            height: 591px;
+        }
+    
+        &__link-item {
+            font-size: 60px;
+        }  
+    
+        &__content {
+            padding-left: 20px;           
+            width: 100%;
+        }
+    
+        &__line-box {
+            width: 19px;
+            height: 19px;
+            top: 50%;
+            left: -90px;
         }
     }
 }

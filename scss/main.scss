@@ -74,6 +74,65 @@ a:hover {
     }
 }
 
+.scroll-text {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__area {
+        width: 100%;
+        gap: 25px;
+    }
+
+    &__item {
+        font-size: 100px;
+        font-weight: 700;
+        font-family: "Orbitron", sans-serif;
+        -webkit-text-stroke: 1px $scrollText;
+        color: transparent;
+    }
+
+    &__area {
+        div{
+            gap: 20px;           
+    }}
+
+    &__area {
+        div:nth-child(1){
+            animation: text-animation 40s linear infinite;
+            animation-delay: -40s;            
+    }}
+
+    &__area {
+        div:nth-child(2){
+            animation: text-animation2 40s linear infinite;
+            animation-delay: -20s;
+    }}
+
+    @keyframes text-animation {
+        0%
+        {
+            transform: translateX(100%);
+        }
+        100% 
+        {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes text-animation2 {
+        0%
+        {
+            transform: translateX(0%);
+        }
+        100% 
+        {
+            transform: translateX(-200%);
+        }
+    }
+}
+
+
 @include breakpoints(xxl) {
     .container-xxl {
         max-width: 1300px;
