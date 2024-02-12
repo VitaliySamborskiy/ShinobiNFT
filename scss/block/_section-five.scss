@@ -1,15 +1,6 @@
 .section-five {
-    &__background{
-        position: relative;
-        top: -126px;
-        padding-top: 140px;
-        background-color: $burgerBackground;
-        width: 100%;
-        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
-    }
-
     &__container {
-        margin: 171px 55px 66px; 
+        margin: 287px 55px 63px; 
         width: 85%;
     }
 
@@ -18,7 +9,7 @@
     }
 
     &__title {
-        margin-top: 20px;        
+        margin-top: 25px;        
     }
 
     &__text {
@@ -35,12 +26,7 @@
 }
 
 @include breakpoints(xl) {
-    .section-five {
-        &__background{
-            top: -110px;
-            clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
-        }
-    
+    .section-five {    
         &__container {
             margin: 171px auto 66px;
             width: 95%;
@@ -53,13 +39,7 @@
 }
 
 @include breakpoints(md) {
-    .section-five {
-        &__background{
-            top: -80px;
-            padding-top: 80px;
-            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
-        }
-    
+    .section-five {    
         &__container {
             margin: 141px auto 54px; 
             width: 65%;
@@ -86,16 +66,10 @@
 }
 
 @include breakpoints(sm) {
-    .section-five {
-        &__background{
-            top: -42px;
-            padding-top: 80px;
-            clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
-        }
-    
+    .section-five {    
         &__container {
             flex-wrap: wrap;
-            margin: 31px auto 54px; 
+            margin: 102px auto 54px; 
             width: 95%;
             gap: 52px;
         }
@@ -108,7 +82,7 @@
         }
     
         &__title {
-            margin-top: 33px;
+            margin-top: 34px;
             font-size: 40px;       
         }
     

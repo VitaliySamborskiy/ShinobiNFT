@@ -1,13 +1,6 @@
 @import './color';
 @import './fonts';
 @import './breakpoints';
-@import './block/header';
-@import './block/burger';
-@import'./block/main-page';
-@import'./block/section-two';
-@import'./block/benefits';
-@import'./block/tabs';
-@import'./block/section-five';
 
 * {
     box-sizing: border-box;
@@ -82,8 +75,16 @@ a:hover {
     }
 }
 
-.scroll-text {
+.body-background {
     position: relative;
+    padding: 10px 0 10px;
+    background-color: $burgerBackground;
+    width: 100%;
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.scroll-text {
+    position: absolute;
     width: 100%;
     overflow: hidden;
     transform: rotate(-4deg);
@@ -167,7 +168,11 @@ a:hover {
         max-width: 80%;
         min-width: 1000px;
         padding: 0 3px;
-    }  
+    } 
+    
+    .body-background {
+        clip-path: polygon(0 5.7%, 100% 0, 100% 100%, 0% 100%);
+    }
 }
 
 @include breakpoints(md) {
@@ -175,6 +180,14 @@ a:hover {
         max-width: 90%;
         min-width: 768px;
         padding: 0 30px;
+    }
+
+    .body-background {
+        margin-top: 95px;
+        padding: 10px 0 10px;
+        background-color: $burgerBackground;
+        width: 100%;
+        clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
     }
     
     .button-section {
@@ -210,6 +223,11 @@ a:hover {
         max-width: 90%;
         min-width: 375px;
         padding: 0 10px;
+    }
+
+    .body-background {
+        margin-top: 85px;
+        clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
     }
 
     .scroll-text{
@@ -251,3 +269,12 @@ a:hover {
         }
     }
 }
+
+@import './block/header';
+@import './block/burger';
+@import'./block/main-page';
+@import'./block/section-two';
+@import'./block/benefits';
+@import'./block/tabs';
+@import'./block/section-five';
+@import'./block/skills';

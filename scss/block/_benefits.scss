@@ -147,7 +147,7 @@
         }
     
         &__text-content {
-            margin: 48px auto 0;
+            margin: 45px auto 0;
             width: 100%;
             max-width: 480px ;
         }
@@ -201,13 +201,13 @@
     .benefits {
         &__container {
             grid-template-columns: repeat(auto-fill, minmax( 100%, 1fr));
-            margin-top: 54px;
+            margin: 54px auto 0;
         }
     
         &__img-partner {
             top: -50px;
             left: 45%;
-            width: 57%;
+            width: 50%;
         }
 
         &__img-shinobi-block {
@@ -219,22 +219,22 @@
         }
     
         &__img-shinobi {
-            margin-left: 33px;
-            width: 73%;
+            margin-left: 63px;
+            width: 64%;
             min-width: 0px;
         }
     
         &__text-title {
-            margin-left: 8%;
+            margin-left: 14%;
         }
     
         &__text-block {
-            margin: 23px 0 0 0;
-            width: 100%;
+            margin: 23px auto 0;
+            width: 85%;
         }
     
         &__text-area {
-            width: 100%;
+            width: 90%;
             min-width: 270px;
             text-align: start;
         }
