@@ -1,6 +1,6 @@
 .section-two {
     &__content {
-        margin-top: 134px;
+        margin-top: 138px;
     }
 
     &__header {
@@ -25,7 +25,7 @@
     }
 
     &__body {
-        margin: 59px auto 0;
+        margin: 64px auto 0;
         padding-left: 80px;
         width: 94%;
     }
@@ -44,7 +44,7 @@
 
     &__body-block {
         background: $blockBlackFill;
-        padding: 5px 32px;
+        padding: 4px 32px;
         font-weight: 700;
         font-size: 40px;
         border-radius: 20px;
@@ -90,7 +90,7 @@
 @include breakpoints(md) {
     .section-two {
         &__content {
-            margin-top: 62px;
+            margin-top: 66px;
         }
     
         &__header {
@@ -109,7 +109,7 @@
         &__header-text {
             padding: 5px 15px;
             font-size: 14px;
-            margin: 5px auto 0;
+            margin: 4px auto 0;
         }
     
         &__body {
@@ -140,7 +140,7 @@
         }
     
         &__body-block {
-            padding: 7px 19px;
+            padding: 6px 19px;
             font-size: 18px;
             border-radius: 20px;
             margin-bottom: 35px;
@@ -151,7 +151,7 @@
 @include breakpoints(sm) {
     .section-two {
         &__content {
-            margin-top: 62px;
+            // margin-top: 68px;
         }
     
         &__header {
@@ -160,7 +160,7 @@
         }
     
         &__header-title {
-            padding-right: 15px;
+            padding-right: 2px;
             margin: 0 auto;
         }
     

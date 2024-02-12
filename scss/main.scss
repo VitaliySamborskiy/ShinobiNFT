@@ -7,6 +7,7 @@
 @import'./block/section-two';
 @import'./block/benefits';
 @import'./block/tabs';
+@import'./block/section-five';
 
 * {
     box-sizing: border-box;
@@ -36,6 +37,13 @@ h1, h2, h3 {
     font-size: 75px;
     font-weight: 700;
     font-family: "Orbitron", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -52,7 +60,7 @@ a:hover {
         background: $accentuatingColor;
         color: $mainBackground;
         width: 365px;
-        padding: 30px 0;
+        padding: 29px 0;
         font-size: 25px;
         font-weight: 700;
         border-radius: 30px;
@@ -65,7 +73,7 @@ a:hover {
     }
     
     &__bottom-button {
-        margin-top: 42px;
+        margin-top: 40px;
         transition: transform, 0.5s ease-in-out;
     }
 
@@ -78,10 +86,11 @@ a:hover {
     position: relative;
     width: 100%;
     overflow: hidden;
+    transform: rotate(-4deg);
 
     &__area {
         width: 100%;
-        gap: 25px;
+        gap: 20px;
     }
 
     &__item {
@@ -90,11 +99,24 @@ a:hover {
         font-family: "Orbitron", sans-serif;
         -webkit-text-stroke: 1px $scrollText;
         color: transparent;
+        line-height: 1.1;
     }
 
-    &__area {
+  &__area {
         div{
             gap: 20px;           
+    }}
+
+    &__area {
+        div:nth-child(1){
+            animation: text-animation 40s linear infinite;
+            animation-delay: -40s;            
+    }}
+
+    &__area {
+        div:nth-child(2){
+            animation: text-animation2 40s linear infinite;
+            animation-delay: -20s;
     }}
 
     &__area {
@@ -112,7 +134,7 @@ a:hover {
     @keyframes text-animation {
         0%
         {
-            transform: translateX(100%);
+            transform: translateX(103%);
         }
         100% 
         {
@@ -167,6 +189,20 @@ a:hover {
             border-radius: 20px;
         }
     }
+
+    .scroll-text {
+        margin-top: 79px;
+
+        &__area {
+            div{
+                gap: 10px;           
+        }}
+
+        &__item {
+            font-size: 70px;
+            line-height: normal;
+        }
+    }
 }
 
 @include breakpoints(sm) {
@@ -176,6 +212,35 @@ a:hover {
         padding: 0 10px;
     }
 
+    .scroll-text{
+        &__item {
+            font-size: 39px;
+            line-height: normal;
+        }
+
+        @keyframes text-animation {
+            0%
+            {
+                transform: translateX(103%);
+            }
+            100% 
+            {
+                transform: translateX(-100%);
+            }
+        }
+    
+        @keyframes text-animation2 {
+            0%
+            {
+                transform: translateX(0%);
+            }
+            100% 
+            {
+                transform: translateX(-203%);
+            }
+        }
+    }
+    
     .button-section {
         &__registration {
             padding: 20px 0;

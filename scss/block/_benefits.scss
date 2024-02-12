@@ -1,6 +1,6 @@
 .benefits {
     &__container {
-        margin-top: 114px;
+        margin-top: 122px;
         width: 88.5%;
     }
 
@@ -46,7 +46,7 @@
         text-align: right;
         width: 100%;
         min-width: 400px;
-        gap: 21px;
+        gap: 37px;
         line-height: 1.2;
     }
 
@@ -55,7 +55,7 @@
     }
 
     &__text-svg {
-        margin: 10px 0 25px 30px;
+        margin: 10px 0 10px 30px;
         min-height: 100%;
         justify-content: space-between;
     }
@@ -67,7 +67,7 @@
     }
 
     &__button {
-        margin: 0 !important;
+        margin: 0  auto!important;
     }
 }
 
@@ -124,6 +124,7 @@
 
         &__text-svg {
             margin-left: 25px;
+            margin: 10px 0 7px 20px;
         }
     
         &__svg {
@@ -182,11 +183,11 @@
             text-align: left;
             width: 70%;
             min-width: 390px;
-            gap: 21px;
+            gap: 26px;
         }
     
         &__text-svg {
-            margin: 5px 11px 14px 0;
+            margin: 0 11px 0 5px;
         }
     
         &__svg {
@@ -200,13 +201,13 @@
     .benefits {
         &__container {
             grid-template-columns: repeat(auto-fill, minmax( 100%, 1fr));
-            margin-top: 47px;
+            margin-top: 54px;
         }
     
         &__img-partner {
-            top: -55px;
-            left: 43%;
-            width: 59%;
+            top: -50px;
+            left: 45%;
+            width: 57%;
         }
 
         &__img-shinobi-block {
@@ -218,7 +219,7 @@
         }
     
         &__img-shinobi {
-            margin-left: 30px;
+            margin-left: 33px;
             width: 73%;
             min-width: 0px;
         }
@@ -228,19 +229,18 @@
         }
     
         &__text-block {
-            margin: 21px 0 0 0;
+            margin: 23px 0 0 0;
             width: 100%;
         }
     
         &__text-area {
             width: 100%;
             min-width: 270px;
-            gap: 10px;
             text-align: start;
         }
     
         &__text-svg {
-            margin: 8px 11px 20px 0;
+            margin: 0 11px 0 0;
             gap: 0px;
             min-height: 100%;
             justify-content: space-between;

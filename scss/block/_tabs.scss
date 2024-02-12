@@ -1,6 +1,6 @@
 .tabs {
     &__container {
-        margin-top: 97px;
+        margin-top: 95px;
     }
 
     &__title {
@@ -16,7 +16,7 @@
     &__block {
         position: relative;
         width: 100%;
-        margin-top: 113px;
+        margin-top: 120px;
     }
 
     &__line {
@@ -56,7 +56,7 @@
     &__line-box {
         width: 32px;
         height: 32px;
-        top: -113px;
+        top: -108px;
         left: 50%;
         transform: translate(-50%, -50%);
         background: $mainTitle;
@@ -80,13 +80,17 @@
     }
 
     &__container-text {
-        font-size: 22px;
+        font-size: 20px;
         margin: 0;
     }
 
     &__white {
         color: $mainTitle;
-        font-size: 25px; 
+        font-size: 22px; 
+    }
+
+    &__bottom-button {
+        margin-top: 23px !important;
     }
 }
 
@@ -135,7 +139,8 @@
 @include breakpoints (md) {
     .tabs {
         &__container {
-            margin-top: 198px;
+            margin: 198px auto 0;
+            width: 80%;
         }
     
         &__title {
@@ -161,7 +166,7 @@
         &__vertical-line {
             margin: 38px 0 0 60px;
             width: 1px;
-            height: 551px;
+            height: 550px;
             background: $notActive;
         }
     
@@ -197,7 +202,7 @@
             align-items: center;
             position: relative;
             width: 100%;
-            height: 75px;
+            height: 60px;
         }
     
         &__container-item_active {
@@ -218,7 +223,8 @@
 @include breakpoints(sm) {
     .tabs {
         &__container {
-            margin-top: 188px;
+            margin: 200px 0 0 0;
+            width: 100%;
         }
     
         &__title {
@@ -226,17 +232,17 @@
         }
     
         &__block {
-            margin-top: 10px;
+            margin-top: 14px;
         }
 
         &__vertical-line {
             padding: 1px;
-            margin: 30px 0 0 28px;
+            margin: 38px 0 0 28px;
         }
     
         &__link-items {
             margin-left: 18px;
-            height: 591px;
+            height: 595px;
         }
     
         &__link-item {
