@@ -1,4 +1,4 @@
-.section-two {
+.scout {
     &__content {
         margin-top: 138px;
     }
@@ -54,7 +54,7 @@
 }
 
 @include breakpoints(xl) {
-    .section-two {    
+    .scout {    
         &__header {
             margin-left: 70px;
             width: 75%;
@@ -88,7 +88,7 @@
 }
 
 @include breakpoints(md) {
-    .section-two {
+    .scout {
         &__content {
             margin-top: 66px;
         }
@@ -149,11 +149,7 @@
 }
 
 @include breakpoints(sm) {
-    .section-two {
-        &__content {
-            // margin-top: 68px;
-        }
-    
+    .scout {
         &__header {
             margin: 0 auto;
             width: 90%;

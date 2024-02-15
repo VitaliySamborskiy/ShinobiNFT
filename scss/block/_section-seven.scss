@@ -1,22 +1,44 @@
 .seven-section {
+    &__background{
+        background-color: $burgerBackground;
+        width: 100%;
+    }
+
     &__container {
-        margin-top: 85px;
+        padding-top: 90px;
     }
 
     &__block {
         width: 90%;
         margin-left: 73px;
-        position: relative;
     }
 
-    &__container
-    >:nth-child(2) {
-        margin-top: 68px;
+    &__block-strategy {
+        margin: 100px 0 0 73px;
+        width: 90%;
+        margin-left: 73px;
     }
     
     &__title {
         font-size: 68px;
         line-height: 0.9;
+        position: relative;
+    }
+
+    &__title::after {
+        content: "";
+        position: absolute;
+        background: $sevenSectionLine;
+        width: 110%;
+        height: 2px;
+        bottom: -24px;
+        left: 0;
+    }
+
+    &__block-strategy {
+    .seven-section__title::after{
+            left: -60px;
+        }
     }
 
     &__span-yellow {
@@ -27,36 +49,23 @@
         position: relative;
     }
 
-    &__item {
-        margin-top: 12px;
-        width: 44%;
+    &__items-strategy {
+        display: flex;
+        justify-content: space-between;
     }
-
-    &__block:nth-child(2){
-    .seven-section__item{
-         width: 30%;
-    }}
 
     &__text-span{
         color: $mainTitle;
     }
 
-    &__block:nth-child(2){
-    .seven-section__line{
-        position: absolute;
-        right: 0;
-        width: 784px;
-    }}
-
-    &__line {
-        margin-top: 25px;
-        width: 716px;
-        height: 2px;
-        background: $sevenSectionLine;
+    &__text {
+        margin-top: 8px;
+        width: 44%;
+        text-align: right; 
     }
 
-    &__line-mobile {
-        display: none;
+    &__text-strategy {
+        width: 30%;
     }
 
     &__bottom-section {
@@ -92,24 +101,32 @@
             font-size: 50px;
         }
 
-        &__item {
+        &__text {
+            margin-top: 0px;
             width: 46%;
-            font-size: 18px;
+            font-size: 18px;       
+        }
+    
+        &__text-strategy {
+            width: 40%;
+            font-size: 18px;        
         }
 
-        &__block:nth-child(2){
-            .seven-section__line{
-            width: 564px;
-        }}
-        
-        &__line {
-            width: 516px;
+        &__title::after {
+            content: "";
+            position: absolute;
+            background: $sevenSectionLine;
+            width: 110%;
+            height: 2px;
+            bottom: -20px;
+            left: 0;
         }
-
-        &__block:nth-child(2){
-            .seven-section__item{
-             width: 40%;
-        }}
+    
+        &__block-strategy {
+        .seven-section__title::after{
+                left: -40px;
+            }
+        }
 
         &__bottom-section {
             margin: 85px auto 0;
@@ -125,78 +142,48 @@
 @include breakpoints(md) {
     .seven-section{
         &__container {
-            margin-top: 114px;
+            padding-top: 114px;
         }
 
         &__title {
             font-size: 30px;
         }
 
-        &__line-mobile {
-            display: block;
-            background: $sevenSectionLine;
-            margin-top: 14px;
-            width: 335px;
-            height: 1px;
-        }
-
-        &__item {
-            position: relative;
-            margin-top: 0px;
-            width: 40%;
-            min-width: 430px;
+        &__title::after {
+            display: none;
         }
 
         &__text {
             font-size: 14px;
-            text-align: left !important;
+            text-align: left;
+            min-width: 400px;
         }
 
         &__block {
-            width: 90%;
             margin: 0 auto;
         }
 
-        &__container
-        >:nth-child(2) {
-            margin-top: 35px;
+        &__block-strategy {
+            margin: 35px auto 0;
+            display: flex;
         }
-        
-        &__line {
-            display: none;
-        }
-
-        &__block:nth-child(2){
-            .seven-section__line-mobile{
-            position: absolute;
-            right: 0;
-            bottom: -10px;
-        }}
-
-        @media (max-width: 992px ) {
-            &__block:nth-child(2){
-                .seven-section__items{
-                display: flex !important;
-                flex-direction: column-reverse;
-                align-items: end !important;
-            }}
-        }        
-
-        &__block:nth-child(2){
-            .seven-section__item{
-             width: 59%;
-             min-width: 430px;
-        }}
-
-        &__block:nth-child(2){
-            .seven-section__text{
-             text-align: right !important;
-        }}
 
         &__items {
-            flex-wrap: wrap;
             row-gap: 5px;
             column-gap: 35px;
+        }
+        
+        &__text-strategy {
+            font-size: 14px;
+            text-align: right;
+            width: 40%;
+            min-width: 270px;
+        }
+
+        &__items-strategy {
+            flex-wrap: wrap;
+            row-gap: 5px;
+            column-gap: 35px;            
         }
 
         &__bottom-section {
@@ -220,7 +207,7 @@
 @include breakpoints(sm) {
     .seven-section{
         &__container {
-            margin-top: 60px;
+            padding-top: 60px;
         }
 
         &__line-mobile {

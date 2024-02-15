@@ -80,7 +80,7 @@ a:hover {
     padding: 10px 0 10px;
     background-color: $burgerBackground;
     width: 100%;
-    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .scroll-text {
@@ -88,6 +88,7 @@ a:hover {
     width: 100%;
     overflow: hidden;
     transform: rotate(-4deg);
+    z-index: 1;
 
     &__area {
         width: 100%;
@@ -103,21 +104,9 @@ a:hover {
         line-height: 1.1;
     }
 
-  &__area {
+    &__area {
         div{
             gap: 20px;           
-    }}
-
-    &__area {
-        div:nth-child(1){
-            animation: text-animation 40s linear infinite;
-            animation-delay: -40s;            
-    }}
-
-    &__area {
-        div:nth-child(2){
-            animation: text-animation2 40s linear infinite;
-            animation-delay: -20s;
     }}
 
     &__area {
@@ -160,7 +149,12 @@ a:hover {
     .container-xxl {
         max-width: 1300px;
         padding: 0 3px;
-    } 
+    }
+
+    .scroll-text{
+        margin-left: 2px;
+        width: 99.5%;
+    }
 }
 
 @include breakpoints(xl) {
@@ -171,7 +165,12 @@ a:hover {
     } 
     
     .body-background {
-        clip-path: polygon(0 5.7%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .scroll-text{
+        margin-left: 2px;
+        width: 99.5%;
     }
 }
 
@@ -187,7 +186,7 @@ a:hover {
         padding: 10px 0 10px;
         background-color: $burgerBackground;
         width: 100%;
-        clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 4.4%, 100% 0, 100% 100%, 0% 100%);
     }
     
     .button-section {
@@ -227,14 +226,16 @@ a:hover {
 
     .body-background {
         margin-top: 85px;
-        clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 2.3%, 100% 0, 100% 100%, 0% 100%);
     }
 
     .scroll-text{
+        margin-left: 2px;
+        width: 99%;
         &__item {
             font-size: 39px;
             line-height: normal;
-        }
+        }  
 
         @keyframes text-animation {
             0%
@@ -273,9 +274,9 @@ a:hover {
 @import './block/header';
 @import './block/burger';
 @import'./block/main-page';
-@import'./block/section-two';
+@import'./block/scout';
 @import'./block/benefits';
 @import'./block/tabs';
-@import'./block/section-five';
+@import'./block/money';
 @import'./block/skills';
 @import'./block/section-seven';

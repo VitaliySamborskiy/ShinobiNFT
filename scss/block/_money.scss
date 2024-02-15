@@ -1,6 +1,13 @@
-.section-five {
+.money {
+    &__background{
+        background-color: $burgerBackground;
+        width: 100%;
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    }
+
     &__container {
-        margin: 287px 55px 63px; 
+        padding-top: 287px;
+        margin: 0 55px 63px; 
         width: 85%;
     }
 
@@ -26,9 +33,10 @@
 }
 
 @include breakpoints(xl) {
-    .section-five {    
+    .money {    
         &__container {
-            margin: 171px auto 66px;
+            padding-top: 171px;
+            margin: auto 66px;
             width: 95%;
         }
     
@@ -39,9 +47,10 @@
 }
 
 @include breakpoints(md) {
-    .section-five {    
+    .money {    
         &__container {
-            margin: 141px auto 54px; 
+            padding-top: 141px;
+            margin: 88px auto 54px; 
             width: 65%;
         }
     
@@ -66,10 +75,15 @@
 }
 
 @include breakpoints(sm) {
-    .section-five {    
+    .money {    
+        &__background{
+            clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
+        }
+
         &__container {
             flex-wrap: wrap;
-            margin: 102px auto 54px; 
+            padding-top: 102px;
+            margin: 95px auto 54px; 
             width: 95%;
             gap: 52px;
         }
