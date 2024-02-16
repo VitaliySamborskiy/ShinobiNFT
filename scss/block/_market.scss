@@ -1,4 +1,4 @@
-.seven-section {
+.market {
     &__background{
         background-color: $burgerBackground;
         width: 100%;
@@ -36,7 +36,7 @@
     }
 
     &__block-strategy {
-    .seven-section__title::after{
+    .market__title::after{
             left: -60px;
         }
     }
@@ -52,6 +52,7 @@
     &__items-strategy {
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
 
     &__text-span{
@@ -96,7 +97,7 @@
 }
 
 @include breakpoints(xl) {
-    .seven-section{
+    .market{
         &__title {
             font-size: 50px;
         }
@@ -111,19 +112,9 @@
             width: 40%;
             font-size: 18px;        
         }
-
-        &__title::after {
-            content: "";
-            position: absolute;
-            background: $sevenSectionLine;
-            width: 110%;
-            height: 2px;
-            bottom: -20px;
-            left: 0;
-        }
     
         &__block-strategy {
-        .seven-section__title::after{
+        .market__title::after{
                 left: -40px;
             }
         }
@@ -140,7 +131,7 @@
 }
 
 @include breakpoints(md) {
-    .seven-section{
+    .market{
         &__container {
             padding-top: 114px;
         }
@@ -156,21 +147,35 @@
         &__text {
             font-size: 14px;
             text-align: left;
-            min-width: 400px;
+            width: 60%;
+            min-width: 315px;
+        }
+
+        &__text::after {
+            content: "";
+            position: absolute;
+            background: $sevenSectionLine;
+            width: 60%;
+            height: 1px;
+            bottom: -10px;
+            left: 0;
         }
 
         &__block {
             margin: 0 auto;
+            width: 75%;
         }
 
         &__block-strategy {
             margin: 35px auto 0;
             display: flex;
+            width: 75%;
         }
 
         &__items {
+            flex-direction: column;
             row-gap: 5px;
-            column-gap: 35px;
+            align-items: start; 
         }
         
         &__text-strategy {
@@ -180,10 +185,21 @@
             min-width: 270px;
         }
 
+        &__text-strategy::after {
+            content: "";
+            position: absolute;
+            background: $sevenSectionLine;
+            width: 60%;
+            height: 1px;
+            bottom: -10px;
+            right: 0;
+        }
+
         &__items-strategy {
-            flex-wrap: wrap;
+            flex-direction: column-reverse;
             row-gap: 5px;
-            column-gap: 35px;            
+            align-items: end;
+            width: 100%;      
         }
 
         &__bottom-section {
@@ -205,18 +221,9 @@
 }
 
 @include breakpoints(sm) {
-    .seven-section{
+    .market{
         &__container {
             padding-top: 60px;
-        }
-
-        &__line-mobile {
-            margin-top: 8px;
-        }
-
-        &__item {
-            width: 40%;
-            min-width: 315px;
         }
 
         &__block {
@@ -224,20 +231,21 @@
             margin: 0 auto;
         }
 
-        &__container
-        >:nth-child(2) {
-            margin-top: 40px;
+        &__text::after {
+            width: 110%;
+            bottom: -9px;
         }
-        
-        &__block:nth-child(2){
-            .seven-section__line-mobile{
-                right: 0;
-        }}
 
-        &__block:nth-child(2){
-            .seven-section__item{
-             min-width: 243px;
-        }}
+        &__text-strategy::after {
+            width: 110%;
+            bottom: -6px;
+        }
+
+        &__block-strategy {
+            margin: 50px auto 0;
+            display: flex;
+            width: 84%;
+        }
 
         &__bottom-section {
             margin: 10px auto 80px;

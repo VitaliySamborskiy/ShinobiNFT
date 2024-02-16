@@ -6,23 +6,20 @@
         left: 0;
     }
 
-    &_active
-    &__icon {
+    &__icon_active {
     span {
     &:nth-child(1) {
         transform: rotate(-45deg) translate(-9px, 5px);
         width: 29px; 
     }}}
 
-    &_active
-    &__icon {
+    &__icon_active {
     span {
     &:nth-child(2) {
         opacity: 0;
     }}}
 
-    &_active
-    &__icon {
+    &__icon_active {
     span {
     &:nth-child(3) {
         transform: rotate(45deg) translate( -9px, -5px);
