@@ -10,6 +10,51 @@ html {
     scroll-behavior: smooth;
 }
 
+.bottom-anim {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease-in-out 0s;
+}
+
+.bottom_active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.top-anim {
+    transform: translate(0px, -120%);
+    opacity: 0;
+    transition: all 0.8s ease-in-out 0s;
+}
+
+.top_active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.left-anim {
+    transform: translate(-10%, 0px);
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.8s ease-in-out 0s;
+}
+
+.left_active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.right-anim {
+    transform: translate(10%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease-in-out 0s;
+}
+
+.right_active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
 body {
     background: $mainBackground;
     color: $mainTextColor;
@@ -49,6 +94,7 @@ a:hover {
 }
 
 .button-section {
+    transition: all 0.8s ease-in-out 0.5s;
     &__registration {
         background: $accentuatingColor;
         color: $mainBackground;

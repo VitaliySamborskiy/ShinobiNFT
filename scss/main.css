@@ -50,6 +50,51 @@ html {
   scroll-behavior: smooth;
 }
 
+.bottom-anim {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease-in-out 0s;
+}
+
+.bottom_active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.top-anim {
+  transform: translate(0px, -120%);
+  opacity: 0;
+  transition: all 0.8s ease-in-out 0s;
+}
+
+.top_active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.left-anim {
+  transform: translate(-10%, 0px);
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.8s ease-in-out 0s;
+}
+
+.left_active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.right-anim {
+  transform: translate(10%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease-in-out 0s;
+}
+
+.right_active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
 body {
   background: #0c0b0e;
   color: #b4b4b4;
@@ -88,6 +133,9 @@ a:hover {
   color: #ebfc56;
 }
 
+.button-section {
+  transition: all 0.8s ease-in-out 0.5s;
+}
 .button-section__registration {
   background: #ebfc56;
   color: #0c0b0e;
@@ -465,6 +513,7 @@ a:hover {
 .main-page__content {
   margin: 73px auto 0;
   width: 1030px;
+  transition: all 0.8s ease-in-out 0.3s;
 }
 .main-page__title {
   font-size: 60px;
@@ -543,6 +592,7 @@ a:hover {
   margin-top: 138px;
 }
 .scout__header {
+  transition: all 0.8s ease-in-out 1s;
   margin-left: 75px;
   width: 79%;
 }
