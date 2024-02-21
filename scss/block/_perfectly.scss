@@ -1,0 +1,270 @@
+.perfectly {
+    &__container {
+        margin-top: 120px;
+    }
+    &__title-block {
+        width: 83%;
+        margin-left: 80px;
+    }
+
+    &__support-title {
+        font-size: 50px;
+        font-weight: 500;
+    }
+
+    &__yellow-title {
+        color: $accentuatingColor;
+        font-size: 50px;
+        font-weight: 500;
+        font-family: 'Raleway-italic';
+        text-align: end;
+    }
+
+    &__main-title {
+        font-size: 142px;
+        text-align: end;
+    }
+
+    &__text {
+        margin: 60px auto 0;
+        width: 88%;
+        color: $mainTitle;
+        font-size: 26px;
+    }
+
+    &__text-italic {
+        color: $mainTextColor;
+        font-family: 'Raleway-italic';
+    }
+
+    &__text-block {
+        padding: 4px 18px;
+        color: $accentuatingColor;
+        font-family: 'Raleway-italic';
+        background: $blockBlackFill;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px 0 $boxShadow;
+    }
+
+    &__button-block {
+        margin: 239px auto 0;
+        position: relative;
+    }
+
+    &__circle-outline{
+        margin: 0 auto;
+        height: 259px;
+        width: 569px;
+        background: $perfectlyYellowOutline;
+        border-radius: 0px 0px 279px 279px / 0px 0px 259px 259px;
+        opacity: 0.5;
+    }
+
+    &__circle-fill {
+        height: 257px;
+        width: 562px;
+        background: $blockBackground;
+        border-radius: 0px 0px 279px 279px / 0px 0px 259px 259px;
+    }
+
+    &__button-link {
+        position: absolute;
+        top: 32px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__background-button {
+        width: 358px;
+        height: 358px;
+        background: $blockBackground;
+        border-radius: 100%;
+    }
+
+    &__background-outline {
+        width: 303px;
+        height: 303px;
+        border: $mainTitle solid 2px;
+        border-radius: 100%;
+    }
+    &__support-text {
+        margin-top: 100px;
+        color: $mainTextColor;
+        font-size: 26px;
+        line-height: 155%;
+        font-family: 'Raleway-italic';
+    }
+
+    &__main-text {
+        font-size: 35px;
+        line-height: 155%;
+        font-weight: 700;
+    }
+
+    &__background-gray {
+        width: 100%;
+        background: $blockBackground;
+    }
+
+    &__text-two {
+        margin: 20px auto;
+        width: 75%;
+        font-size: 26px;
+        line-height: 155%;
+    }
+
+    &__white {
+        color: $mainTitle;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    &__button-section {
+        margin-top: 38px;
+    }
+
+    &__scroll-text{
+        width: 99%;
+        margin-left: 8px;
+        position: static;
+        transform: rotate(0deg);
+    }
+
+    &__area {
+        margin-top: 40px;
+        height: 94px;
+    }
+}
+
+@include breakpoints(xl) {
+    .perfectly {
+        &__title-block {
+            width: 90%;
+        }
+    
+        &__text {
+            width: 80%;
+        }
+    }
+}
+
+@include breakpoints(md) {
+    .perfectly {
+        &__container {
+            margin-top: 21px;
+        }
+
+        &__title-block {
+            width: 63%;
+            margin: 0 auto;
+        }
+    
+        &__support-title {
+            font-size: 18px;
+        }
+
+        &__yellow-title {
+            font-size: 19px;
+            margin-top: 8px;
+        }
+
+        &__main-title {
+            font-size: 35px;
+            margin: 18px 28px 0 0;
+        }
+    
+        &__text {
+            position: relative;
+            margin: 20px auto 0;
+            width: 70%;
+            font-size: 13px;
+        }
+    
+        &__text-block {
+            position: absolute;
+            border-radius: 18px;
+            bottom: -42px;
+            left: 5px;
+        }
+    
+        &__button-block {
+            margin: 185px auto 0;
+        }
+    
+        &__circle-outline{
+            height: 115px;
+            width: 252px;
+        }
+    
+        &__circle-fill {
+            height: 113px;
+            width: 248px;
+        }
+    
+        &__button-link {
+            top: 9px;
+        }
+    
+        &__background-button {
+            width: 177px;
+            height: 177px;
+        }
+    
+        &__background-outline {
+            width: 150px;
+            height: 150px;
+        }
+
+        &__support-text {
+            margin-top: 47px;
+            font-size: 13px;
+        }
+    
+        &__main-text {
+            font-size: 16px;
+        }
+    
+        &__background-gray {
+            width: 100%;
+        }
+    
+        &__text-two {
+            width: 65%;
+            font-size: 13px;
+            text-align: center;
+        }
+    
+        &__white {
+            font-size: 13px;
+        }
+    
+        &__button-section {
+            margin-top: 34px;
+            padding-bottom: 38px;
+        }
+    
+        &__scroll-text{
+            display: none;
+        }
+    }
+}
+
+@include breakpoints(sm) {
+    .perfectly {
+        &__title-block {
+            width: 83%;
+            margin: 0 auto;
+        }
+
+        &__text {
+            margin: 20px auto 0;
+            width: 80%;
+        }
+
+        &__text-two {
+            width: 85%;
+            font-size: 12px;
+            line-height: 115%;
+        }
+    }
+}

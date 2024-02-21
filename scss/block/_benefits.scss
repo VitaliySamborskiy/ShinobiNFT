@@ -75,14 +75,14 @@
     .benefits-xxl {
         max-width: 1595px;
         padding: 0 3px;
-    } 
+    }
 }
 
 @include breakpoints (xl) {
     .benefits {
         &__container {
             margin-top: 100px;
-            width: 100%;
+            width: 95%;
         }
     
         &__img-partner {
@@ -92,6 +92,7 @@
 
         &__img-shinobi-block {
             height: 44rem;
+            margin-left: 30px;
         }
 
         &__img-shinobi {
@@ -207,7 +208,7 @@
         &__img-partner {
             top: -50px;
             left: 46%;
-            width: 49%;
+            width: 51%;
         }
 
         &__img-shinobi-block {
@@ -219,17 +220,17 @@
         }
     
         &__img-shinobi {
-            margin-left: 63px;
-            width: 64%;
+            margin-left: 20px;
+            width: 74%;
             min-width: 0px;
         }
     
         &__text-title {
-            margin-left: 14%;
+            margin-left: 12%;
         }
     
         &__text-block {
-            margin: 23px auto 0;
+            margin: 26px auto 0;
             width: 90%;
         }
     

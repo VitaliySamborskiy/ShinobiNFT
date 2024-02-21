@@ -5,7 +5,7 @@
     }
 
     &__container {
-        padding-top: 90px;
+        padding: 95px 0 4px;
     }
 
     &__block {
@@ -228,16 +228,17 @@
 
         &__block {
             width: 84%;
+            display: flex;
             margin: 0 auto;
         }
 
         &__text::after {
-            width: 110%;
+            width: 108%;
             bottom: -9px;
         }
 
         &__text-strategy::after {
-            width: 110%;
+            width: 108%;
             bottom: -6px;
         }
 
