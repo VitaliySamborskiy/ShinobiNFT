@@ -32,86 +32,30 @@ document.querySelectorAll('.tabs__link-item').forEach((item) =>
 
 document.querySelector('.tabs__link-item').click();
 
-// animation
+// swiper
 
-// const animItems = document.querySelectorAll('.bottom-anim');
+const swiper = new Swiper('.swiper', {
+    autoplay:{
+        delay: 5000,
+        
+    },
+    // Інші налаштування Swiper
+    // effect: 'coverflow',
+    // coverflowEffect: {
+    //     // depth: 0,
+    //     // modifier: 1,
+    //     // rotate: 0,
+        
+    //     // scale: 2,
+    //     // slideShadows:false,
+    //     // stretch:0,
+    // },
+    longswipes:true,
+    slidesPerView:3,
+    spaceBetween:20,
+    allowSlideNext: true,
+    loop: true,
+    centeredSlides:true,
+    initialSlide: 1,
 
-// if (animItems.length > 0) {
-//     window.addEventListener('scroll', animOnScroll);
-//     function animOnScroll() {
-//         for (let index = 0; index< animItems.length; index++) {
-//             const animItems = animItems[index];
-//             const animItemsHeight = animItems.offsetHeight;
-//             const animItemsOffset = offset(animItems).top;
-//             const animStart = 4;
-
-//             let animItemsPoint = window.innerHeight - animItemsHeight / animStart;
-
-//             if (animItemsHeight > window.innerHeight) {
-//                 animItemsPoint = window.innerHeight - window.innerHeight / animStart;
-//             }
-
-//             if ((pageYOffset > animItemsOffset - animStart) && pageYOffset < (animItemsOffset + animItemsHeight)){
-//                 animItems.classList.add('bottom_active');
-//             } else {
-//                 animItems.classList.remove('bottom_active');
-//             }
-//         }
-//     }
-//     function offset(el) {
-//         const rect = el.getBoundingClientRect(),
-//             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-//             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//         return { top: rect.top + scrollTop, left: rect.left + scrollLeft}
-//     }
-
-//     animOnScroll();
-// }
-
-const bottomAnimItems = document.querySelectorAll('.bottom-anim');
-const topAnimItems = document.querySelectorAll('.top-anim');
-const leftAnimItems = document.querySelectorAll('.left-anim');
-const rightAnimItems = document.querySelectorAll('.right-anim');
-
-if (bottomAnimItems.length > 0 || topAnimItems.length > 0 || leftAnimItems.length > 0 || rightAnimItems.length > 0) {
-    window.addEventListener('scroll', animElements);
-
-    function animElements() {
-        animOnScroll(bottomAnimItems, 3);
-        animOnScroll(topAnimItems, 3);
-        animOnScroll(leftAnimItems, 3);
-        animOnScroll(rightAnimItems, 3);
-    }
-
-    function animOnScroll(items, animStart) {
-        for (let index = 0; index < items.length; index++) {
-            const animItem = items[index];
-            const animItemHeight = animItem.offsetHeight;
-            const animItemOffset = offset(animItem).top;
-            let animItemPoint = window.innerHeight - animItemHeight / animStart;
-
-            if (animItemHeight > window.innerHeight) {
-                animItemPoint = window.innerHeight - window.innerHeight / animStart;
-            }
-
-            if ((window.pageYOffset > animItemOffset - animItemPoint) && window.pageYOffset < (animItemOffset + animItemHeight)) {
-                animItem.classList.add('bottom_active');
-                animItem.classList.add('top_active');
-                animItem.classList.add('left_active');
-                animItem.classList.add('right_active');
-            } else {
-                if (!animItem.classList.contains('anim-no-hide'))
-                    animItem.classList.remove('bottom_active', 'top_active', 'left_active', 'right_active');
-            }
-        }
-    }
-
-    function offset(el) {
-        const rect = el.getBoundingClientRect(),
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-    }
-
-    animElements();
-}
+  });

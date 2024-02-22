@@ -1993,4 +1993,22 @@ a:hover {
     font-size: 12px;
     line-height: 115%;
   }
+}
+.swiper-section__container {
+  margin-top: 126px;
+}
+.swiper-section__title {
+  text-align: center;
+}
+.swiper-section__block {
+  margin-top: 143px;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-section__slide {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  width: 120%;
 }/*# sourceMappingURL=main.css.map */
