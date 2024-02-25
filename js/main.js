@@ -39,20 +39,9 @@ const swiper = new Swiper('.swiper', {
         delay: 5000,
         
     },
-    // Інші налаштування Swiper
-    // effect: 'coverflow',
-    // coverflowEffect: {
-    //     // depth: 0,
-    //     // modifier: 1,
-    //     // rotate: 0,
-        
-    //     // scale: 2,
-    //     // slideShadows:false,
-    //     // stretch:0,
-    // },
     longswipes:true,
-    slidesPerView:3,
-    spaceBetween:20,
+    slidesPerView: 'auto',
+    spaceBetween: 150,
     allowSlideNext: true,
     loop: true,
     centeredSlides:true,

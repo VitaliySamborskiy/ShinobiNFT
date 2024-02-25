@@ -2001,14 +2001,32 @@ a:hover {
   text-align: center;
 }
 .swiper-section__block {
-  margin-top: 143px;
-  width: 100%;
+  margin-top: 105px;
+  width: 120%;
+  transform: translate(-3%);
+}
+.swiper-section__hidden {
   overflow: hidden;
+  width: 100%;
 }
 .swiper-section__slide {
-  width: 100%;
+  width: 694px;
 }
 
+.swiper {
+  height: 443px;
+}
 .swiper-wrapper {
-  width: 120%;
+  align-items: center;
+}
+.swiper-slide {
+  padding-top: 10px;
+  width: 694px;
+  height: 363px;
+}
+.swiper-slide-active {
+  padding-top: 0px;
+  max-width: 841px;
+  transform: scale(1.22) !important;
+  transition: 0.5s;
 }/*# sourceMappingURL=main.css.map */
