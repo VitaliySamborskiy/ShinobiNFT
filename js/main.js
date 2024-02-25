@@ -35,11 +35,10 @@ document.querySelector('.tabs__link-item').click();
 // swiper
 
 const swiper = new Swiper('.swiper', {
-    autoplay:{
-        delay: 5000,
-        
-    },
-    longswipes:true,
+    // autoplay:{
+    //     delay: 5000,  
+    // },
+    // longswipes:true,
     slidesPerView: 'auto',
     spaceBetween: 150,
     allowSlideNext: true,
