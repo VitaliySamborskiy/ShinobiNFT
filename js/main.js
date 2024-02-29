@@ -39,11 +39,10 @@ const swiper = new Swiper('.swiper', {
     //     delay: 5000,  
     // },
     // longswipes:true,
-    slidesPerView: 'auto',
-    spaceBetween: 150,
+    slidesPerView: 2.5,
+    // spaceBetween: 0,
     allowSlideNext: true,
     loop: true,
     centeredSlides:true,
     initialSlide: 1,
-
   });

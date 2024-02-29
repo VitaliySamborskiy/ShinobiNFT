@@ -1,0 +1,133 @@
+.rates {
+    &__container {
+        margin-top: 335px;
+    }
+
+    &__title-section {
+        margin: 0 auto;
+        width: 88%;
+    }
+
+    &__title {
+        margin: 5px 15px 0 0;
+    }
+
+    &__title-yellow {
+        background: $accentuatingColor;
+        color: $skillsBlock;
+        padding: 5px 15px 0;
+    }
+
+    &__text {
+        margin: 28px 0 0 340px;
+        width: 54%;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 137%;
+    }
+
+    &__text-white {
+        color: $mainTitle;
+    }
+
+    &__outline-border {
+        margin: 0 auto;
+        width: 601px;
+        padding: 2px;
+        background: $retasOutlaneBorder;
+        border-radius: 20px;
+    }
+
+    &__outline-background {
+        width: 597px;
+        margin: 0 auto;
+        background: $boxShadow;
+        border-radius: 20px;
+    }
+    
+    &__outline-fill {
+        width: 597px;
+        margin: 0 auto;
+        padding: 18px 0;
+        background: $retasOutline;
+        border-radius: 20px;
+    }
+
+    &__two-block-border {
+        width: 569px;
+        margin: 0 auto;
+        padding: 2px;
+        background: $retasTwoBlock;
+        border-radius: 20px;
+    }
+
+    &__two-block {
+        background: $blockBackground;
+        border-radius: 20px;
+    }
+
+    &__two-block-fill {
+        // width: 565px;
+        padding: 20px;
+        // // background: $retasTwoFill;
+        border-radius: 20px;
+        box-shadow: inset -36px 36px 36px 0 rgba(255, 255, 255, 0.03), inset 36px -36px 36px 0 rgba(0, 0, 0, 0.03);
+    }
+
+    &__block-title {
+        color: $accentuatingColor;
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 155%;
+        text-align: center;
+    }
+
+    // &__items {
+    // }
+
+    &__item {
+        color: $mainTitle;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 116%;
+    }
+
+    &__svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    // &__item-text {
+    // }
+
+    &__block-text {
+        color: $accentuatingColor;
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+        font-family: 'Raleway-italic';
+    }
+
+    &__fill-prise {
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 155%;
+        text-align: center;
+    }
+
+    &__discount-prise {
+        color: $mainTitle;
+        font-size: 45px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 155%;
+    }
+
+    &__month-prise {
+        font-size: 20px;
+        text-align: center;
+        color: $mainTextColor;
+        line-height: 155%;
+        font-family: 'Raleway-italic';
+    }
+}

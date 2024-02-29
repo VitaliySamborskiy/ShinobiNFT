@@ -8,9 +8,9 @@
     }
 
     &__block {
-        margin-top: 105px;
-        width: 120%;
-        transform: translate(-3%);
+        margin-top: 95px;
+        width: 109%;
+        transform: translate(-1%);
     }
 
     &__hidden {
@@ -19,30 +19,120 @@
     }
 
     &__slide {
-        width: 694px;
+        width: 83%;
+        margin-top: 50px;
     }
 
-    // &__bottom-button {
-    //     margin-top: 4px !important;
-    // }
+    .button-section__bottom-button {
+        margin:25px;
+    }
 }
 
 .swiper {
-    height: 443px;
+    aspect-ratio: 16 / 3.6;
     &-wrapper{
         align-items: center;
+        width: 100%;
     }
 
-    &-slide {
-        padding-top: 10px;
-        width: 694px;
-        height: 363px;
+    &__slide {
+        margin-top: 40px;
+        width: 88%;
     }
     
     &-slide-active {
-        padding-top: 0px;
-        max-width: 841px;
         transform: scale(1.22)!important;
         transition: 0.5s;
+        margin-left: 30px;
+    }
+}
+
+@include breakpoints(xl) {
+    .swiper-section {
+        &__container {
+            margin-top: 80px;
+        }
+
+        &__title {
+            font-size: 65px;
+        }
+
+        &__block {
+            width: 120%;
+            transform: translate(-7%);
+        }
+        
+        &__slide {
+            width: 86%;
+            margin-top: 35px;
+        }
+    }
+    
+    .swiper {  
+        &__slide {
+            margin-top: 0px;
+        }
+        
+        &-slide-active {
+            margin-left: 20px;
+        }
+    }
+}
+
+@include breakpoints(md) {
+    .swiper-section {
+        &__container {
+            margin-top: 50px;
+        }
+
+        &__title {
+            font-size: 30px;
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        &__block {
+            margin-top: 64px;
+            width: 130%;
+            transform: translate(-10%);
+        }
+        
+        &__slide {
+            width: 88%;
+            margin-top: 18px;
+        }
+    }
+    
+    .swiper {
+        &__slide {
+            margin-top: 0px;
+            width: 100%;
+        }
+        
+        &-slide-active {
+            margin-left: 10px;
+        }
+    }
+}
+
+@include breakpoints(sm) {
+    .swiper-section {
+        &__title {
+            width: 60%;
+            margin: 0 35px;
+        }
+
+        &__block {
+            width: 189%;
+            transform: translate(-21%);
+        }
+        
+        &__slide {
+            width: 85%;
+        }
+    }
+    
+    .swiper {
+        aspect-ratio: 16 / 3.7;
     }
 }

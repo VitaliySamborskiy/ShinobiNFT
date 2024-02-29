@@ -4,13 +4,14 @@
     }
 
     &__title {
-        margin-left: 70px;
+        margin-left: 75px;
+        letter-spacing: 1.7px;
     }
 
     &__title-yellow {
         color: $mainBackground;
         background: $accentuatingColor;
-        padding: 0 13px 4px 0;
+        padding: 0 13px 4px 10px;
         margin-left: 15px;
     }
 
@@ -99,7 +100,7 @@
         }
     
         &__block {
-            margin: 57px auto 0;
+            margin: 62px auto 0;
             flex-wrap: wrap;
             width: 70%;
             row-gap: 13px;

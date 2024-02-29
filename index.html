@@ -13,8 +13,8 @@
 
     <header>
         <div class="container-xxl container-xl container-md container-sm">
-            <div class="header bottom-anim anim-no-hide">
-                <nav class="header__block d-flex align-items-center justify-content-between">
+            <div class="header">
+                <nav class="header__block bottom-anim anim-no-hide d-flex align-items-center justify-content-between">
                     <a class="text-decoration-none" href="#">
                         <svg class="header__logo">
                             <use xlink:href="#logo"></use>
@@ -37,7 +37,7 @@
                     <button type="button" class="header__button btn btn-link text-decoration-none">Личный кабинет</button>
                 </nav>
                 <div class="burger-menu">
-                    <div class="burger-menu__icon d-flex flex-column">
+                    <div class="burger-menu__icon bottom-anim anim-no-hide d-flex flex-column">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -475,9 +475,9 @@
 
         <section class="swiper-section">
             <div class="swiper-section__container">
-                <h2 class="swiper-section__title">РЕЗУЛЬТАТЫ БЭК-ТЕСТОВ:</h2>
+                <h2 class="swiper-section__title bottom-anim anim-no-hide">РЕЗУЛЬТАТЫ БЭК-ТЕСТОВ:</h2>
                 <div class="swiper-section__hidden">
-                    <div class="swiper-section__block">
+                    <div class="swiper-section__block bottom-anim anim-no-hide">
                         <div class="swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide"><img class="swiper-section__slide" src="./img/swiper-section/slide-1.avif" alt=""></div>
@@ -494,10 +494,78 @@
                 </div>
                 
                 <div class="button-section d-grid justify-content-center bottom-anim anim-no-hide">
-                    <a href="#" class="button-section__bottom-button swiper-slide__bottom-button d-grid justify-content-center"><img class="button-section__svg" src="./img/arrow-bottom.svg" alt=""></a>
+                    <a href="#" class="button-section__bottom-button d-grid justify-content-center"><img class="button-section__svg" src="./img/arrow-bottom.svg" alt=""></a>
                 </div>
             </div>
         </section>
+
+        <!-- <section class="rates container-xxl container-xl container-md container-sm">
+            <div class="rates__container">
+                <div class="rates__title-section d-flex">
+                    <h2 class="rates__title">КАКИЕ</h2><h2 class="rates__title-yellow">ЦЕНЫ И УСЛОВИЯ?</h2>
+                </div>
+                <p class="rates__text"><span class="rates__text-white">Все очень просто-</span> платите за подписку и пользуйтесь в удовольствие. <span class="rates__text-white">Никаких скрытых условий и платежей.</span></p>
+                <div class="rates__outline-border">
+                    <div class="rates__outline-background">
+                        <div class="rates__outline-fill">
+                            <div class="rates__two-block-border">
+                                <div class="rates__two-block">
+                                    <div class="rates__two-block-fill">
+                                        <h3 class="rates__block-title">ЕДИНЫЙ ТАРИФ</h3>
+                                        <ul class="rates__items list-unstyled">
+                                            <li class="rates__item d-flex align-items-center">
+                                                <svg class="rates__svg">
+                                                    <use xlink:href="#yellow-circle"></use>
+                                                </svg>
+                                                <p class="rates__item-text">доступ к программному обеспечению с телефона и компьютера</p>
+                                            </li>
+                                            <li class="rates__item d-flex align-items-center">
+                                                <svg class="rates__svg">
+                                                    <use xlink:href="#yellow-circle"></use>
+                                                </svg>
+                                                <p class="rates__item-text">доступ к боту</p>
+                                            </li>
+                                            <li class="rates__item d-flex align-items-center">
+                                                <svg class="rates__svg">
+                                                    <use xlink:href="#yellow-circle"></use>
+                                                </svg>
+                                                <p class="rates__item-text">доступ к закрытому Телеграм-чату</p>
+                                            </li>
+                                            <li class="rates__item d-flex align-items-center">
+                                                <svg class="rates__svg">
+                                                    <use xlink:href="#yellow-circle"></use>
+                                                </svg>
+                                                <p class="rates__item-text">доступ к стратегиям с возможностью редактирования и ведения сделок вручную</p>
+                                            </li>
+                                            <li class="rates__item d-flex align-items-center">
+                                                <svg class="rates__svg">
+                                                    <use xlink:href="#yellow-circle"></use>
+                                                </svg>
+                                                <p class="rates__item-text">доступ к автоматизированным стратегиям</p>
+                                            </li>
+                                            <li class="rates__item d-flex align-items-center">
+                                                <svg class="rates__svg">
+                                                    <use xlink:href="#yellow-circle"></use>
+                                                </svg>
+                                                <p class="rates__item-text">без комиссий за сделки</p>
+                                            </li>
+                                        </ul>
+                                        <p class="rates__block-text">СКИДКА -50% НА ПЕРВЫЙ МЕСЯЦ</p>
+                                        <p class="rates__fill-prise">50$/день</p>
+                                        <p class="rates__discount-prise">25$/день</p>
+                                        <p class="rates__month-prise">*полная сумма при оплате за месяц = 750$</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-section left-anim anim-no-hide d-grid justify-content-center">
+                <a href="#" class="button-section__registration money__registration button-section__none text-decoration-none text-center">РЕГИСТРАЦИЯ</a>
+                <a href="#" class="button-section__bottom-button money__bottom-button d-grid justify-content-center"><img class="button-section__svg" src="./img/arrow-bottom.svg" alt=""></a>
+            </div>  
+        </section> -->
         
         
         <div class=" d-none svg-sprite">
@@ -554,6 +622,14 @@
                 <symbol id="long-arrow" viewBox="0 0 383 24">
                     <g>
                        <path d="M382.061 13.0606C382.646 12.4748 382.646 11.5251 382.061 10.9393L372.515 1.39337C371.929 0.807579 370.979 0.807579 370.393 1.39337C369.808 1.97915 369.808 2.9289 370.393 3.51469L378.879 12L370.393 20.4852C369.808 21.071 369.808 22.0208 370.393 22.6066C370.979 23.1924 371.929 23.1924 372.515 22.6066L382.061 13.0606ZM1.31134e-07 13.5L381 13.5L381 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="#737373" />
+                    </g>
+                </symbol>
+            </svg>
+
+            <svg>
+                <symbol id="yellow-circle" viewBox="0 0 16 16">
+                    <g>
+                        <circle cx="8" cy="8" r="8" fill="#EBFC56"/>
                     </g>
                 </symbol>
             </svg>
