@@ -1,0 +1,177 @@
+.candlestorm {
+    &__container {
+        margin-top: 78px;
+    }
+
+    &__section-title {
+        position: relative;
+        left: 1%;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    &__title {
+        margin: 15px 15px 0 0;
+        font-size: 59px;
+        letter-spacing: -1.7px;
+    }
+
+    &__title-yellow {
+        color: $blockBlackBackground;
+        padding: 14px 26px 14px 16px;
+        font-size: 59px;
+        background: $accentuatingColor;
+    }
+
+    &__items {
+        width: 90%;
+        margin: 90px auto 0;
+        grid-template-columns: repeat(auto-fill, minmax( 37%, 1fr));
+        column-gap: 66px;
+        row-gap: 71px;
+    }
+
+    &__item {
+        position: relative;
+        padding: 5px 20px;
+        height: 260px;
+        background: $candlestormItemColor;
+        border-radius: 20px;
+        line-height: 125%;
+        overflow: hidden;
+    }
+
+    &__circle {
+        position: absolute;
+        top: -100px;
+        right: -40px;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background: $candlestormCircleColor;
+    }
+
+    &__img {
+        width: 120px;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    &__text {
+        width: 80%;
+        margin: 5px auto 0;
+    }
+
+    &__registration {
+        margin-top: 80px;
+    }
+
+    &__bottom-button {
+        margin-top: 13px;
+    }
+}
+
+@include breakpoints (xl) {
+    .candlestorm {
+        &__section-title {
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            margin: 0 auto;
+        }
+    
+        &__title-yellow {
+            margin: 0 auto;
+        }
+
+        &__items {
+            width: 90%;
+            margin: 90px auto 0;
+            grid-template-columns: repeat(auto-fill, minmax( 48%, 1fr));
+            column-gap: 35px;
+            row-gap: 51px;
+        }
+    }
+}
+
+@include breakpoints (md) {
+    .candlestorm {
+        &__container {
+            margin-top: 133px;
+        }
+
+        &__section-title {
+            width: 70%;
+        }
+    
+        &__title {
+            margin: 4px 15px 0 0;
+            font-size: 30px;
+        }
+    
+        &__title-yellow {
+            margin: 0;
+            padding: 0 16px 0 6px;
+            font-size: 30px;
+        }
+    
+        &__items {
+            margin: 35px auto 0;
+            width: 70%;
+            row-gap: 15px;
+        }
+    
+        &__item {
+            height: 161px;
+            line-height: 85%;
+        }
+
+        &__circle {
+            position: absolute;
+            top: -65px;
+            right: -27px;
+            width: 130px;
+            height: 130px;
+            border-radius: 100%;
+            background: $candlestormCircleColor;
+        }
+    
+        &__img {
+            width: 75px;
+        }
+    
+        &__text {
+            width: 70%;
+            font-size: 16px;
+        }
+    
+        &__registration {
+            display: none;
+        }
+
+        &__button-section  {
+            height: 0;
+        }
+    }
+}
+
+@include breakpoints (sm) {
+    .candlestorm {
+        &__section-title {
+            width: 85%;
+        }
+
+        &__items {
+
+            margin: 35px auto 0;
+            width: 100%;
+            row-gap: 15px;
+        }
+
+        &__text {
+            width: 90%;
+            font-size: 14px;
+        }
+    }
+}

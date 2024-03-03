@@ -111,7 +111,7 @@
         }
 
         &__title-yellow {
-            padding: 0 0 0 15px;
+            padding: 0 15px 0 15px;
             font-size: 55px;
             color: $blockBackground;
             background: $accentuatingColor;
@@ -157,6 +157,7 @@
         &__title-yellow {
             font-size: 30px;
             padding: 0 2px 1px 10px;
+            letter-spacing: -1px;
         }
     
         &__block {
