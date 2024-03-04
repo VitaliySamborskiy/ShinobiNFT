@@ -1,0 +1,193 @@
+.footer {
+    &__block-one {
+        margin-top: 65px;
+    }
+
+    &__disclaimer-title {
+        color: $footerTitle;
+        font-size: 40px;
+        font-family: 'Raleway';
+        font-weight: 300;
+    }
+
+    &__disclaimer-text {
+        width: 82%;
+        margin-top: 15px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    &__block-two {
+        display: flex;
+        margin: 100px auto;
+        width: 88%;
+    }
+
+    &__contact-block {
+        width: 17%; 
+        margin-right: 120px;
+    }
+
+    &__address {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $footerText;
+    }
+
+    &__bottom-button {
+        margin-top: 40px;
+        width: 17%;
+        transform: rotate(180deg);
+        transition: transform, 0.5s ease-in-out;
+    }
+
+    &__bottom-button:hover {
+        transform: scale(1.3) rotate(180deg);
+    }
+
+    &__contacts-list {
+        grid-template-columns: repeat(auto-fill, minmax( 30%, 1fr));
+        column-gap: 35px;
+        row-gap: 13px;
+    }
+
+    &__contact{
+        font-size: 18px;
+        font-weight: 500;    
+    }
+
+    &__contact{
+    a {
+        color: $accentuatingColor;
+    }}
+
+    &__contact{
+    a:hover {
+        color: $footerText;
+    }}
+
+    &__items-block {
+        display: flex;
+        gap: 35px;
+    }
+
+    &__items {
+        width: 21%;
+        gap: 8px;
+    }
+
+    &__item-title {
+        color: $mainTitle;
+        font-size: 22px;
+        font-weight: 600;
+        pointer-events: none;
+        line-height: 115%;
+    }
+
+    &__item {
+        font-size: 18px;
+        font-weight: 500;
+        width: 120%;
+    }
+
+    &__item{
+    a {
+        color: $footerText;
+    }}
+
+    &__item:hover {
+    a {
+        color: $accentuatingColor;
+    }}
+}
+
+@include breakpoints(xl) {
+    .footer {
+        &__block-two {
+            width: 95%;
+        }
+
+        &__contact-block {
+            width: 21%; 
+            margin-right: 30px;
+        }
+
+        &__items-block {
+            gap: 30px;
+        }
+    }
+}
+
+@include breakpoints (md) {
+    .footer {
+        &__block-one {
+            margin-top: 100px;
+        }
+    
+        &__disclaimer-title {
+            font-size: 30px;
+        }
+    
+        &__disclaimer-text {
+            width: 75%;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+    
+        &__block-two {
+            width: 60%;
+            margin: 75px auto;
+        }
+    
+        &__contact-block {
+            width: 65%;
+            height: 100%; 
+            margin-right: 0;
+        }
+    
+        &__address {
+            margin-bottom: 13px;
+            font-size: 16px;
+        }
+
+        &__svg {
+            display: none;
+        }
+    
+        &__contacts-list {
+            grid-template-columns: repeat(auto-fill, minmax( 30%, 1fr));
+            column-gap: 54px;
+            row-gap: 15px;
+            width: 70%;
+        }
+    
+        &__items-block {
+            display: block;
+            gap: 0px;
+        }
+    
+        &__items {
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+            transition: all 0.5s ease-in;
+        }
+
+        &__items_active {
+            height: 70%;
+        }
+    
+        &__item-title {
+            padding-bottom: 8px;
+            font-size: 18px;
+            pointer-events: fill;
+        }
+    
+        &__item {
+            margin: 0 auto;
+            font-size: 14px;
+            width: 90%;
+        }
+    }
+}

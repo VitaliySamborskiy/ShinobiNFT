@@ -35,14 +35,26 @@ document.querySelector('.tabs__link-item').click();
 // swiper
 
 const swiper = new Swiper('.swiper', {
-    // autoplay:{
-    //     delay: 5000,  
-    // },
-    // longswipes:true,
     slidesPerView: 2.5,
-    // spaceBetween: 0,
     allowSlideNext: true,
     loop: true,
     centeredSlides:true,
     initialSlide: 1,
   });
+
+// acardion
+
+document.querySelectorAll('.footer__item-title').forEach((item) => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault(); //відключає дію за замовчцванням
+        const parent = item.parentNode;
+        if(parent.classList.contains('footer__items_active')) {
+            parent.classList.remove('footer__items_active')
+        } else {
+            document
+            .querySelectorAll('.footer__items')
+            .forEach((child) => child.classList.remove('footer__items_active'))
+            parent.classList.add('footer__items_active')
+        }
+    })
+})
