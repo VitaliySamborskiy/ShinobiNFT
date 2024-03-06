@@ -188,7 +188,13 @@
     
         &__link-item {
             font-size: 60px;
-        }  
+        }
+
+        @media (hover: hover) {
+            &__link-item:hover {
+                color: $accentuatingColor;
+            }
+        }
     
         &__content {
             padding-left: 34px;
@@ -225,6 +231,8 @@
         &__white {
             font-size: 15px; 
         }
+
+
     }
 }
 

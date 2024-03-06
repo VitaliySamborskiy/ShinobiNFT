@@ -28,7 +28,11 @@
     }
 
     &__bottom-button {
-        margin-top: 12px !important;
+        margin: 12px;
+    }
+
+    &__registration:hover {
+        background: $burgerBackground;
     }
 }
 
@@ -36,7 +40,7 @@
     .money {    
         &__container {
             padding-top: 171px;
-            margin: auto 66px;
+            margin: 0 auto 66px;
             width: 95%;
         }
     
@@ -70,6 +74,13 @@
 
         &__registration {
             display: block !important;
+        }
+
+        @media (hover: hover) {
+            &__registration:hover {
+                background-color: $accentuatingColor;
+                color: $mainBackground;
+            }
         }
     }
 }

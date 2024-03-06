@@ -105,20 +105,38 @@
     }
 
     &__block-text {
-        margin-top: 68px;
+        width: 565px;
+        position: relative;
+        left: -25px;
+        margin-top: 49px;
+        padding: 17px 0;
         color: $accentuatingColor;
         font-size: 25px;
         font-weight: 600;
         text-align: center;
         font-family: 'Raleway-italic';
+        background: $blockBlackFill;
+        box-shadow: 0 4px 15px 0 $boxShadow;
     }
 
     &__fill-prise {
-        margin-top: 20px;
+        position: relative;
+        color: $sevenSectionLine;
+        margin-top: 8px;
         font-weight: 600;
         font-size: 35px;
         line-height: 155%;
         text-align: center;
+    }
+
+    &__fill-prise::before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: 32%;
+        height: 2px;
+        width: 181px;
+        background: $sevenSectionLine;
     }
 
     &__discount-prise {
@@ -140,7 +158,7 @@
     }
 
     &__bottom-button {
-        margin-top: 52px;
+        margin: 48px auto 10px;
     }
 }
 
@@ -252,13 +270,24 @@
         }
     
         &__block-text {
-            margin-top: 25px;
+            width: 282px;
+            margin-top: 17px;
+            position: relative;
+            left: -12px;
+            padding: 8px 0;
             font-size: 14px;
         }
     
         &__fill-prise {
-            margin-top: 10px;
+            margin-top: 0px;
             font-size: 18px;
+        }
+
+        &__fill-prise::before {
+            top: 15px;
+            left: 32%;
+            height: 1px;
+            width: 90px;
         }
     
         &__discount-prise {

@@ -1,6 +1,6 @@
 .broadcast {
     &__container {
-        margin-top: 125px;
+        margin-top: 117px;
     }
 
     &__block {
@@ -33,7 +33,7 @@
     }
 
     &__bottom-button {
-        margin-top: 230px;
+        margin: 230px auto 10px;
     }
 }
 
@@ -59,7 +59,7 @@
 @include breakpoints (md) {
     .broadcast {
         &__container {
-            margin: 92px auto 0;
+            margin: 96px auto 0;
         }
 
         &__block {
@@ -107,6 +107,7 @@
         }
     
         &__stream {
+            display: block;
             margin-top: 38px;
             width: 100%;
             border-right: none;
