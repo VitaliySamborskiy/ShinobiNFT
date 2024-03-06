@@ -466,13 +466,19 @@ a:hover {
 .burger-menu__body-background {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -390px;
   width: 40%;
   min-width: 390px;
   height: 100%;
+  opacity: 0;
   z-index: 2;
   background: rgb(27, 27, 27);
   box-shadow: 0 4px 15px 0 #000;
+  transition: all 0.8s ease-in-out;
+}
+.burger-menu__body-background_active {
+  left: 0;
+  opacity: 1;
 }
 .burger-menu__header {
   font-size: 35px;

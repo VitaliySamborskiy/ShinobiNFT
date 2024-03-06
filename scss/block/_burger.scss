@@ -88,13 +88,20 @@
     &__body-background {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -390px;
         width: 40%;
         min-width: 390px;
         height: 100%;
+        opacity: 0;
         z-index: 2;
         background: $MainInfoBorder;
         box-shadow: 0 4px 15px 0 $boxShadow;
+        transition: all 0.8s ease-in-out;
+    }
+
+    &__body-background_active {
+        left: 0;
+        opacity: 1;        
     }
 
     &__header {

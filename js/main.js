@@ -2,11 +2,13 @@
 
 let burger = document.querySelector('.burger-menu__icon');
 let burgerBackground = document.querySelector('.burger-menu__background');
+let burgerBodyBackground = document.querySelector('.burger-menu__body-background');
 let look = document.body;
 
 burger.addEventListener('click', function(){
     burger.classList.toggle('burger-menu__icon_active');
     burgerBackground.classList.toggle('burger-menu__background_active');
+    burgerBodyBackground.classList.toggle('burger-menu__body-background_active')
     look.classList.toggle('look');
 });
 
