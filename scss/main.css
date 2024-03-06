@@ -1522,7 +1522,7 @@ a:hover {
   width: 30%;
 }
 .market__bottom-section {
-  padding: 85px 0 30px 225px;
+  padding: 85px 0 35px 225px;
 }
 .market__svg {
   margin-right: 50px;
@@ -1749,7 +1749,7 @@ a:hover {
   }
 }
 .coverage__container {
-  margin-top: 70px;
+  margin-top: 75px;
 }
 .coverage__title {
   margin-left: 75px;
@@ -1762,7 +1762,7 @@ a:hover {
   margin-left: 15px;
 }
 .coverage__block {
-  margin: 97px auto 0;
+  margin: 95px auto 0;
   width: 90%;
 }
 .coverage__item-border {
@@ -2074,6 +2074,9 @@ a:hover {
   .perfectly__button-section {
     margin-top: 34px;
     padding-bottom: 38px;
+  }
+  .perfectly__registration {
+    display: block;
   }
   .perfectly__scroll-text {
     display: none;
