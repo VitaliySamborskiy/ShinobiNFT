@@ -10,10 +10,10 @@ if (bottomAnimItems.length > 0 || topAnimItems.length > 0 || leftAnimItems.lengt
     window.addEventListener('scroll', animElements);
 
     function animElements() {
-        animOnScroll(bottomAnimItems, 3);
-        animOnScroll(topAnimItems, 3);
-        animOnScroll(leftAnimItems, 3);
-        animOnScroll(rightAnimItems, 3);
+        animOnScroll(bottomAnimItems, 15);
+        animOnScroll(topAnimItems, 15);
+        animOnScroll(leftAnimItems, 15);
+        animOnScroll(rightAnimItems, 15);
     }
 
     function animOnScroll(items, animStart) {
