@@ -32,7 +32,7 @@
     }
 
     &__outline-border {
-        margin: 36px auto 55px;
+        margin: 36px auto 50px;
         width: 601px;
         padding: 2px;
         background: $retasOutlaneBorder;
@@ -182,7 +182,7 @@
 @include breakpoints (md) {
     .rates {
         &__container {
-            margin-top: 88px;
+            margin-top: 100px;
         }
     
         &__title-section {

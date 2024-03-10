@@ -1,6 +1,6 @@
 .tabs {
     &__container {
-        margin-top: 95px;
+        margin-top: 90px;
     }
 
     &__title {
@@ -31,7 +31,7 @@
 
     &__link-items {
         display: flex;
-        padding-top: 21px;
+        padding-top: 22px;
         margin: 0px auto;
         width: 97%;
     }
@@ -239,16 +239,12 @@
 @include breakpoints(sm) {
     .tabs {
         &__container {
-            margin: 200px 0 0 0;
+            margin: 200px auto 0 ;
             width: 100%;
         }
     
         &__title {
             margin:0 2px 0 30px;
-        }
-    
-        &__block {
-            margin-top: 14px;
         }
 
         &__vertical-line {
@@ -262,8 +258,14 @@
         }
     
         &__link-item {
+            padding-top: 20px;
             font-size: 60px;
-        }  
+            height: 119px;
+        }
+
+        &__block {
+            margin-top: 18px;
+        }
     
         &__content {
             padding-left: 20px;           
@@ -282,7 +284,7 @@
             width: 19px;
             height: 19px;
             top: 50%;
-            left: -90px;
+            left: -80px;
         }
     }
 }

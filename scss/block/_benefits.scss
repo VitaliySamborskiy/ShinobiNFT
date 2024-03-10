@@ -148,7 +148,7 @@
         }
     
         &__text-content {
-            margin: 40px auto 0;
+            margin: 50px auto 0;
             width: 100%;
             max-width: 480px ;
         }
@@ -175,7 +175,7 @@
         }
     
         &__text-block {
-            margin: 26px 0 0 15px;
+            margin: 24px 0 0 30px;
             font-size: 13px;
             flex-direction: row-reverse;
         }
@@ -184,7 +184,7 @@
             text-align: left;
             width: 70%;
             min-width: 390px;
-            gap: 26px;
+            gap: 24px;
         }
     
         &__text-svg {
@@ -206,9 +206,9 @@
         }
     
         &__img-partner {
-            top: -50px;
+            top: -46px;
             left: 46%;
-            width: 51%;
+            width: 58%;
         }
 
         &__img-shinobi-block {
@@ -220,22 +220,21 @@
         }
     
         &__img-shinobi {
-            margin-left: 20px;
-            width: 74%;
+            width: 85%;
             min-width: 0px;
         }
     
         &__text-title {
-            margin-left: 12%;
+            margin-left: 7%;
         }
     
         &__text-block {
-            width: 90%;
+            width: 95%;
         }
     
         &__text-area {
-            width: 90%;
-            min-width: 270px;
+            width: 80%;
+            min-width: 320px;
             text-align: start;
         }
     

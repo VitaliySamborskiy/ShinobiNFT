@@ -127,7 +127,7 @@
     &__scroll-text{
         width: 99%;
         margin-left: 8px;
-        position: static;
+        overflow: hidden;
         transform: rotate(0deg);
     }
 
