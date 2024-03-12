@@ -1,46 +1,29 @@
 
   // 2. This code loads the IFrame Player API code asynchronously.
+  let player;
   const tag = document.createElement('script');
 
   tag.src = "https://www.youtube.com/iframe_api";
   const firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  let player;
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-      videoId: '4xDzrJKXOOY?si=ktRGhKRiDDcJnaLI',
+      videoId: '4xDzrJKXOOY',
       events: {
-        'playVideo': playVideo,
-        'pauseVideo': pauseVideo,
+        'onStateChange': function onPlayerStateChange(event) {
+          const autoPlayVideo = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              // console.log(entry);
+              if(!entry.isIntersecting) {
+                player.pauseVideo(); 
+              } 
+            })
+          });
+          
+          let target = document.querySelector('.broadcast_autoplay');
+          autoPlayVideo.observe(target);
+        }
       }
   });
 }
-
-function pauseVideo() {
-  player.playVideo();
-}
-
-function playVideo() {
-  player.pauseVideo();
-}
-
-const optionsActive = {
-  rootMargin: '-140px',
-  threshold: 0.1,
-}
-
-const autoPlayVideo = new IntersectionObserver ((entries) => {
-  console.log(entries);
-  entries.forEach((play) => {
-    if(play.isIntersecting) {
-      player.playVideo();      
-    } else {
-      player.pauseVideo();
-    }
-  })
-
-}, optionsActive);
-
-const autoPlayTarget = document.querySelector('.broadcast_autoplay');
-autoPlayTarget.forEach((element) => autoPlayVideo.observe(element));

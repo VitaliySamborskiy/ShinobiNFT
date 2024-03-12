@@ -2,7 +2,7 @@
 // animation
 
 const options ={
-    rootMargin: '-40px',
+    rootMargin: '10px',
 };
 
 const scrollObserver = new IntersectionObserver((scroll) => {

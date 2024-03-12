@@ -6,20 +6,61 @@
 
     &__container {
         padding-top: 150px;
+
+        @include breakpoints (md) {
+            padding-top: 120px;
+            display: grid;
+            gap: 15px;                        
+        }
+
+        @include breakpoints (sm) {
+            padding-top: 98px;
+        }
     }
 
     &__container-title {
        margin-left: 77px;
+
+       @include breakpoints (md) {
+            margin: 0 auto;
+            display: grid;
+            justify-content: center;
+        }
     }
 
     &__title {
         margin-right: 5px;
+
+        @include breakpoints (xl) {
+            margin-right: 10px;
+        }
+
+       @include breakpoints (md) {
+            font-size: 28px;
+            line-height: 101%;
+            margin-right: 5px;
+        }
+
+       @include breakpoints (sm) {
+            margin-right: 2px;
+            margin-left: 27px;
+        }
     }
 
     &__yellow {
         padding: 0 12px 5px 10px;
         color: $blockBackground;
         background: $accentuatingColor;
+
+        @include breakpoints (md) {
+            padding: 0 10px 2px 6px;
+            font-size: 28px;
+            line-height: 101%;
+        }
+
+        @include breakpoints (sm) {
+            padding: 0 5px 5px 6px;
+        }
     }
 
     &__title-text {
@@ -33,106 +74,8 @@
         background: $blockBlackFill;
         border-radius: 20px;
         box-shadow: 0 4px 15px 0 $boxShadow;
-    }
 
-    &__container 
-    &__block:nth-child(2){
-        margin-top: 40px;
-    }
-
-    &__container 
-    &__block:nth-child(4){
-        padding: 23px 0 23px;
-    }
-
-    &__block {
-        margin-top: 35px;
-        padding: 30px 0 14px;
-        width: 100%;
-        background: $skillsBlock;
-        box-shadow: 0 4px 28px 0 $skillsShadow;
-    }
-
-    &__items {
-        width: 1180px;
-        margin: 0 auto;
-    }
-
-    &__item-svg {
-        margin: 0 auto;
-        width: 25px;
-        height: 25px;
-    }
-
-    &__items-text {
-        padding-top: 8px;
-        color: $mainTitle;
-        width: 90%;
-        line-height: 1.2;
-        text-align: center;
-    }
-
-    &__vertical-line {
-        padding: 1px;
-        width: 1px;
-        height: 112px;
-        background: $skillsGradient;       
-    }
-
-    &__bottom-button {
-        margin: 36px 0 10px;
-    }
-}
-
-@include breakpoints (xl) {
-    .skills {
-        &__container {
-            padding-top: 150px;
-        }
-
-        &__title {
-            margin-right: 10px;
-        }
-    
-        &__items {
-            width: 95%;
-            min-width: 0%;
-            margin: 0 auto;
-        }
-    
-        &__items-text {
-            font-size: 18px;
-        }
-    }
-}
-
-@include breakpoints(md) {
-    .skills {
-        &__container {
-            padding-top: 120px;
-            display: grid;
-            gap: 15px;
-        }
-    
-        &__container-title {
-            margin: 0 auto;
-            display: grid;
-            justify-content: center;
-        }
-    
-        &__title {
-            font-size: 28px;
-            line-height: 101%;
-            margin-right: 5px;
-        }
-    
-        &__yellow {
-            padding: 0 10px 2px 6px;
-            font-size: 28px;
-            line-height: 101%;
-        }
-    
-        &__title-text {
+        @include breakpoints (md) {
             margin-top: 10px;
             width: 209px;
             padding: 5px 5px;
@@ -141,78 +84,122 @@
             text-align: center;
         }
 
-        &__container 
-        &__block:nth-child(2){
+        @include breakpoints (sm) {
+            margin-left: 14px;
+            margin-top: 10px;
+            width: 209px;
+            padding: 6px 5px;
+        }
+    }
+
+    &__container 
+    &__block:nth-child(2){
+        margin-top: 40px;
+        
+        @include breakpoints (md) {
             margin-top: 14px;
         }
+    }
 
-        &__container 
-        &__block:nth-child(4){
+    &__container 
+    &__block:nth-child(4){
+        padding: 23px 0 23px;
+
+        @include breakpoints (md) {
             padding: 0;
         }
-    
-        &__block {
+    }
+
+    &__block {
+        margin-top: 35px;
+        padding: 30px 0 14px;
+        width: 100%;
+        background: $skillsBlock;
+        box-shadow: 0 4px 28px 0 $skillsShadow;
+
+        @include breakpoints (md) {
             margin-top: 0;
             padding: 0;
             background: none;
             box-shadow: none;
         }
-    
-        &__items {
+    }
+
+    &__items {
+        width: 1180px;
+        margin: 0 auto;
+
+        @include breakpoints (xl) {
+            width: 95%;
+            min-width: 0%;
+            margin: 0 auto;
+        }
+
+        @include breakpoints (md) {
             flex-direction: column;
             margin: 0 auto;
             gap: 15px;
             width: 50%;
         }
 
+        @include breakpoints (sm) {
+            width: 70%;
+        }
+    }
+
+    @include breakpoints(md) {
         &__item {
             display: flex;
             align-items: center;
-        }
-    
-        &__item-svg {
-            width: 11px;
-            height: 11px;
-        }
-    
-        &__items-text {
-            padding-top: 0px;
-            font-size: 13px;
-            width: 90%;
-            text-align: left;
-        }
-    
-        &__vertical-line {
-            display: none;     
+            width: 85%;
+            margin: 0 auto;
         }
     }
-}
 
-@include breakpoints(sm) {
-    .skills {
-        &__container {
-            padding-top: 98px;
+    &__item-svg {
+        margin: 0 auto;
+        width: 25px;
+        height: 25px;
+
+        @include breakpoints (md) {
+            width: 11px;
+            height: 11px;
+            margin: 0 ;
         }
-    
-        &__title {
-            margin-right: 2px;
-            margin-left: 27px;
+    }
+
+    &__items-text {
+        padding-top: 8px;
+        color: $mainTitle;
+        width: 90%;
+        line-height: 1.2;
+        text-align: center;
+
+        @include breakpoints (xl) {
+            font-size: 18px;
         }
-    
-        &__yellow {
-            padding: 0 5px 5px 6px;
+
+        @include breakpoints (md) {
+            margin: 0 0 0 15px;
+            padding-top: 0px;
+            font-size: 13px;
+            width: 80%;
+            text-align: left;
         }
-    
-        &__title-text {
-            margin-left: 14px;
-            margin-top: 10px;
-            width: 209px;
-            padding: 6px 5px;
-        }
-    
-        &__items {
-            width: 70%;
-            min-width: 320px;
-        }
+    }
+
+    &__vertical-line {
+        padding: 1px;
+        width: 1px;
+        height: 112px;
+        background: $skillsGradient;
+
+        @include breakpoints (md) {
+            display: none;
+        }  
+    }
+
+    &__bottom-button {
+        margin: 36px 0 10px;
     }
 }
