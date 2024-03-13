@@ -14,7 +14,6 @@
         'onStateChange': function onPlayerStateChange(event) {
           const autoPlayVideo = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-              // console.log(entry);
               if(!entry.isIntersecting) {
                 player.pauseVideo(); 
               } 

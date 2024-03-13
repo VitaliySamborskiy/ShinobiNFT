@@ -1,6 +1,10 @@
 .candlestorm {
     &__container {
         margin-top: 68px;
+
+        @include breakpoints (md) {
+            margin-top: 130px;
+        }
     }
 
     &__section-title {
@@ -8,12 +12,33 @@
         left: 1%;
         margin: 0 auto;
         width: 90%;
+
+        @include breakpoints (xl) {
+            flex-wrap: wrap;
+        }
+        
+        @include breakpoints (md) {
+            width: 70%;        
+        }
+        
+        @include breakpoints (sm) {
+            width: 85%;            
+        }
     }
 
     &__title {
         margin: 15px 15px 0 0;
         font-size: 59px;
         letter-spacing: -1.7px;
+
+        @include breakpoints (xl) {
+            margin: 0 auto;
+        }
+        
+        @include breakpoints (md) {
+            margin: 4px 15px 0 0;
+            font-size: 30px;        
+        }
     }
 
     &__title-yellow {
@@ -21,6 +46,16 @@
         padding: 14px 26px 14px 16px;
         font-size: 59px;
         background: $accentuatingColor;
+
+        @include breakpoints (xl) {
+            margin: 0 auto;
+        }
+        
+        @include breakpoints (md) {
+            margin: 0;
+            padding: 0 16px 0 6px;
+            font-size: 30px;                    
+        }
     }
 
     &__items {
@@ -29,6 +64,22 @@
         grid-template-columns: repeat(auto-fill, minmax( 37%, 1fr));
         column-gap: 66px;
         row-gap: 71px;
+
+        @include breakpoints (xl) {
+            grid-template-columns: repeat(auto-fill, minmax( 48%, 1fr));
+            column-gap: 35px;
+            row-gap: 51px;
+        }
+        
+        @include breakpoints (md) {
+            margin: 35px auto 0;
+            width: 70%;
+            row-gap: 15px;        
+        }
+        
+        @include breakpoints (sm) {
+            width: 100%;       
+        }
     }
 
     &__item {
@@ -39,6 +90,11 @@
         border-radius: 20px;
         line-height: 125%;
         overflow: hidden;
+
+        @include breakpoints (md) {
+            height: 161px;
+            line-height: 85%;
+        }
     }
 
     &__circle {
@@ -49,85 +105,8 @@
         height: 200px;
         border-radius: 100%;
         background: $candlestormCircleColor;
-    }
 
-    &__img {
-        width: 120px;
-        display: flex;
-        margin: 0 auto;
-    }
-
-    &__text {
-        width: 80%;
-        margin: 5px auto 0;
-    }
-
-    &__registration {
-        margin-top: 80px;
-    }
-
-    &__bottom-button {
-        margin: 13px auto;
-    }
-}
-
-@include breakpoints (xl) {
-    .candlestorm {
-        &__section-title {
-            flex-wrap: wrap;
-        }
-
-        &__title {
-            margin: 0 auto;
-        }
-    
-        &__title-yellow {
-            margin: 0 auto;
-        }
-
-        &__items {
-            width: 90%;
-            margin: 90px auto 0;
-            grid-template-columns: repeat(auto-fill, minmax( 48%, 1fr));
-            column-gap: 35px;
-            row-gap: 51px;
-        }
-    }
-}
-
-@include breakpoints (md) {
-    .candlestorm {
-        &__container {
-            margin-top: 130px;
-        }
-
-        &__section-title {
-            width: 70%;
-        }
-    
-        &__title {
-            margin: 4px 15px 0 0;
-            font-size: 30px;
-        }
-    
-        &__title-yellow {
-            margin: 0;
-            padding: 0 16px 0 6px;
-            font-size: 30px;
-        }
-    
-        &__items {
-            margin: 35px auto 0;
-            width: 70%;
-            row-gap: 15px;
-        }
-    
-        &__item {
-            height: 161px;
-            line-height: 85%;
-        }
-
-        &__circle {
+        @include breakpoints (md) {
             position: absolute;
             top: -65px;
             right: -27px;
@@ -136,42 +115,48 @@
             border-radius: 100%;
             background: $candlestormCircleColor;
         }
-    
-        &__img {
+    }
+
+    &__img {
+        width: 120px;
+        display: flex;
+        margin: 0 auto;
+
+        @include breakpoints (md) {
             width: 75px;
         }
-    
-        &__text {
+    }
+
+    &__text {
+        width: 80%;
+        margin: 5px auto 0;
+
+        @include breakpoints (md) {
             width: 70%;
             font-size: 16px;
         }
-    
-        &__registration {
-            display: none;
-        }
 
-        &__button-section  {
-            height: 0;
-        }
-    }
-}
-
-@include breakpoints (sm) {
-    .candlestorm {
-        &__section-title {
-            width: 85%;
-        }
-
-        &__items {
-
-            margin: 35px auto 0;
-            width: 100%;
-            row-gap: 15px;
-        }
-
-        &__text {
+        @include breakpoints (sm) {
             width: 90%;
             font-size: 14px;
+        }
+    }
+
+    &__registration {
+        margin-top: 80px;
+
+        @include breakpoints (md) {
+            display: none;
+        }
+    }
+
+    &__bottom-button {
+        margin: 13px auto;
+    }
+
+    @include breakpoints (md) {
+        &__button-section  {
+            height: 0;
         }
     }
 }

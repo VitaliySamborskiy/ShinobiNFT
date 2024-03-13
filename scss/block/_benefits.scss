@@ -1,7 +1,30 @@
+@include breakpoints(xxl) {
+    .benefits-xxl {
+        max-width: 1595px;
+        padding: 0 3px;
+    }
+}
+
 .benefits {
     &__container {
         margin-top: 122px;
         width: 88.5%;
+
+        @include breakpoints (xl) {
+            margin-top: 100px;
+            width: 95%;
+        }
+        
+        @include breakpoints (md) {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax( 440px, 1fr));
+            margin-top: 97px;        
+        }
+        
+        @include breakpoints (sm) {
+            grid-template-columns: repeat(auto-fill, minmax( 100%, 1fr));
+            margin: 44px auto 0;            
+        }
     }
 
     &__img-partner {
@@ -10,23 +33,83 @@
         left: 463px;
         transform: translateZ(0);
         z-index: -1;
+
+        @include breakpoints (xl) {
+            left: 48%;
+            width: 50%;
+        }
+        
+        @include breakpoints (md) {
+            left: 54%;
+            width: 58%;        
+        }
+        
+        @include breakpoints (sm) {
+            top: -46px;
+            left: 45%;
+            width: 58%;        
+        }
     }
 
     &__text-content {
         margin-top: 180px;
+
+        @include breakpoints (xl) {
+            margin-top: 120px;
+        }
+        
+        @include breakpoints (md) {
+            margin: 47px auto 0;
+            width: 100%;
+            max-width: 480px ;        
+        }
     }
 
     &__img {
         position: relative;
+
+        @include breakpoints (md) {
+            margin: 0 auto;        
+        }
     }
 
     &__img-shinobi-block {
         height: 55rem;
         overflow: hidden;
+
+        @include breakpoints (xl) {
+            height: 44rem;
+            margin-left: 30px;            
+        }
+        
+        @include breakpoints (md) {
+            height: 30rem;        
+        }
+        
+        @include breakpoints (sm) {
+            height: auto;        
+        }
     }
 
     &__img-shinobi {
         margin-left: 20px;
+
+        @include breakpoints (xl) {
+            margin: 0;
+            width: 100%;
+            min-width: 550px;
+        }
+        
+        @include breakpoints (md) {
+            max-width: 500px;
+            width: 100%;
+            min-width: 300px;        
+        }
+        
+        @include breakpoints (sm) {
+            width: 85%;
+            min-width: 0px;        
+        }
     }
 
     &__text-title {
@@ -34,12 +117,44 @@
         margin-right: 68px;
         font-size: 90px;
         font-weight: 700;
+
+        @include breakpoints (xl) {
+            margin: 0 60px 0 0;
+            text-align: end;
+            font-size: 80px;
+        }
+        
+        @include breakpoints (md) {
+            margin-right: 0;
+            margin-left: 18%;
+            text-align: left;
+            font-size: 35px;        
+        }
+        
+        @include breakpoints (sm) {
+            margin-left: 7%;        
+        }
     }
 
     &__text-block {
         margin-top: 36px;
         font-size: 20px;
         font-weight: 500;
+
+        @include breakpoints (xl) {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        
+        @include breakpoints (md) {
+            margin: 24px 0 0 30px;
+            font-size: 13px;
+            flex-direction: row-reverse;        
+        }
+        
+        @include breakpoints (sm) {
+            width: 95%;        
+        }
     }
 
     &__text-area {
@@ -48,6 +163,26 @@
         min-width: 400px;
         gap: 37px;
         line-height: 1.2;
+
+        @include breakpoints (xl) {
+            max-width: 400px;
+            width: 100%;
+            min-width: 390px;
+            gap: 19px;
+        }
+        
+        @include breakpoints (md) {
+            text-align: left;
+            width: 70%;
+            min-width: 390px;
+            gap: 24px;        
+        }
+        
+        @include breakpoints (sm) {
+            width: 80%;
+            min-width: 320px;
+            text-align: start;        
+        }
     }
 
     &__text-white {
@@ -58,195 +193,43 @@
         margin: 10px 0 10px 30px;
         min-height: 100%;
         justify-content: space-between;
+
+        @include breakpoints (xl) {
+            margin-left: 25px;
+            margin: 10px 0 7px 20px;
+        }
+        
+        @include breakpoints (md) {
+            margin: 0 11px 0 5px;        
+        }
+        
+        @include breakpoints (sm) {
+            margin: 0 11px 0 0;
+            gap: 0px;
+            min-height: 100%;
+            justify-content: space-between;        
+        }
     }
 
     &__svg {
-        
         width: 47px;
         height: 30px;
+
+        @include breakpoints (xl) {
+            width: 40px;
+        }
+        
+        @include breakpoints (md) {
+            width: 38px;
+            transform: rotateY(180deg);        
+        }
+        
+        @include breakpoints (sm) {
+            width: 37px;        
+        }
     }
 
     &__button {
         margin: 0  auto!important;
-    }
-}
-
-@include breakpoints(xxl) {
-    .benefits-xxl {
-        max-width: 1595px;
-        padding: 0 3px;
-    }
-}
-
-@include breakpoints (xl) {
-    .benefits {
-        &__container {
-            margin-top: 100px;
-            width: 95%;
-        }
-    
-        &__img-partner {
-            left: 48%;
-            width: 50%;
-        }
-
-        &__img-shinobi-block {
-            height: 44rem;
-            margin-left: 30px;
-        }
-
-        &__img-shinobi {
-            margin: 0;
-            width: 100%;
-            min-width: 550px;
-        }
-    
-        &__text-content {
-            margin-top: 120px;
-        }
-    
-        &__text-title {
-            margin: 0 60px 0 0;
-            text-align: end;
-            font-size: 80px;
-        }
-    
-        &__text-block {
-            margin-top: 30px;
-            font-size: 18px;
-        }
-    
-        &__text-area {
-            max-width: 400px;
-            width: 100%;
-            min-width: 390px;
-            gap: 19px;
-        }
-
-        &__text-svg {
-            margin-left: 25px;
-            margin: 10px 0 7px 20px;
-        }
-    
-        &__svg {
-            width: 40px;
-        }
-    }
-}
-
-@include breakpoints(md) {
-    .benefits {
-        &__container {
-            display: grid !important;
-            grid-template-columns: repeat(auto-fill, minmax( 440px, 1fr));
-            margin-top: 97px;
-        }
-    
-        &__img-partner {
-            left: 54%;
-            width: 58%;
-        }
-    
-        &__text-content {
-            margin: 50px auto 0;
-            width: 100%;
-            max-width: 480px ;
-        }
-
-        &__img {
-            margin: 0 auto;
-        }
-
-        &__img-shinobi-block {
-            height: 30rem;
-        }
-    
-        &__img-shinobi {
-            max-width: 500px;
-            width: 100%;
-            min-width: 300px;
-        }
-    
-        &__text-title {
-            margin-right: 0;
-            margin-left: 18%;
-            text-align: left;
-            font-size: 35px;
-        }
-    
-        &__text-block {
-            margin: 24px 0 0 30px;
-            font-size: 13px;
-            flex-direction: row-reverse;
-        }
-    
-        &__text-area {
-            text-align: left;
-            width: 70%;
-            min-width: 390px;
-            gap: 24px;
-        }
-    
-        &__text-svg {
-            margin: 0 11px 0 5px;
-        }
-    
-        &__svg {
-            width: 38px;
-            transform: rotateY(180deg);
-        }
-    }
-}
-
-@include breakpoints(sm) {
-    .benefits {
-        &__container {
-            grid-template-columns: repeat(auto-fill, minmax( 100%, 1fr));
-            margin: 54px auto 0;
-        }
-    
-        &__img-partner {
-            top: -46px;
-            left: 46%;
-            width: 58%;
-        }
-
-        &__img-shinobi-block {
-            height: auto;
-        }
-
-        &__img {
-            margin: 0 auto;
-        }
-    
-        &__img-shinobi {
-            width: 85%;
-            min-width: 0px;
-        }
-    
-        &__text-title {
-            margin-left: 7%;
-        }
-    
-        &__text-block {
-            width: 95%;
-        }
-    
-        &__text-area {
-            width: 80%;
-            min-width: 320px;
-            text-align: start;
-        }
-    
-        &__text-svg {
-            margin: 0 11px 0 0;
-            gap: 0px;
-            min-height: 100%;
-            justify-content: space-between;
-        }
-    
-        &__svg {
-            width: 37px;
-        }
     }
 }

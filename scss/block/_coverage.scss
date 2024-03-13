@@ -1,11 +1,24 @@
 .coverage {
     &__container {
         margin-top: 75px;
+
+        @include breakpoints(md) {
+            margin-top: 33px;
+        }
     }
 
     &__title {
         margin-left: 75px;
         letter-spacing: 1.7px;
+
+        @include breakpoints(xl) {
+            margin-left: 0;
+            font-size: 65px;
+        }
+        
+        @include breakpoints(md) {
+            font-size: 30px;        
+        }
     }
 
     &__title-yellow {
@@ -13,17 +26,51 @@
         background: $accentuatingColor;
         padding: 0 13px 4px 10px;
         margin-left: 15px;
+
+        @include breakpoints(xl) {
+            font-size: 65px;
+            margin-left: 10px;
+        }
+        
+        @include breakpoints(md) {
+            font-size: 30px;        
+        }
+        
+        @include breakpoints(sm) {
+            padding: 0 18px;
+            margin-left: 0px;        
+        }
     }
 
     &__block {
         margin: 95px auto 0;
         width: 90%;
+
+        @include breakpoints(xl) {
+            width: 97%;
+        }
+        
+        @include breakpoints(md) {
+            margin: 62px auto 0;
+            flex-wrap: wrap;
+            width: 70%;
+            row-gap: 13px;
+            column-gap: 55px;        
+        }
+        
+        @include breakpoints(sm) {
+            width: 90%;        
+        }
     }
 
     &__item-border {
         background: $coverageBorder;
         border-radius: 20px;
         padding: 1px; 
+
+        @include breakpoints(md) {
+            margin: 0 auto;
+        }
     }
 
     &__item {
@@ -32,11 +79,25 @@
         border-radius: 20px;
         background: $mainBackground;
         backdrop-filter: blur(127px);
+
+        @include breakpoints(xl) {
+            padding: 27px 37px 54px;
+            width: 435px;
+        }
+        
+        @include breakpoints(md) {
+            padding: 25px 23px 61px;
+            width: 300px;    
+        }
     }
 
     &__img {
         width: 119px;
         margin: 0 auto;
+
+        @include breakpoints(sm) {
+            width: 86px;
+        }
     }
 
     &__support-title{
@@ -45,112 +106,43 @@
         font-size: 35px;
         color: $accentuatingColor;
         text-align: center;
+
+        @include breakpoints(sm) {
+            margin-top: 15px;
+            font-size: 20px;
+        }
     }
 
     &__text {
         margin-top: 29px;
         text-align: center;
         line-height: 1.2;
+
+        @include breakpoints(sm) {
+            margin-top: 22px;
+            font-size: 13px;
+        }
     }
 
     &__button-section {
         margin-top: 74px;
     }
-}
 
-@include breakpoints(xl) {
-    .coverage {
+    @include breakpoints(xl) {
         &__title-block {
             margin: 0 auto;
         }
         
-        &__title {
-            margin-left: 0;
-            font-size: 65px;
-        }
-    
-        &__title-yellow {
-            font-size: 65px;
-            margin-left: 10px;
-        }
-    
-        &__block {
-            width: 97%;
-        }
-    
-        &__item {
-            padding: 27px 37px 54px;
-            width: 435px;
-        }
-    }
-}
-
-@include breakpoints(md) {
-    .coverage {
-        &__container {
-            margin-top: 33px;
-        }
-    
-        &__title {
-            font-size: 30px;
-        }
-    
-        &__title-yellow {
-            font-size: 30px;
-        }
-    
-        &__block {
-            margin: 62px auto 0;
-            flex-wrap: wrap;
-            width: 70%;
-            row-gap: 13px;
-            column-gap: 55px;
-        }
-
-        &__item-border {
-            margin: 0 auto;
-        }
-    
-        &__item {
-            padding: 25px 23px 61px;
-            width: 300px;
-        }
-    
-        &__img {
-            width: 86px;
-        }
-    
-        &__support-title{
-            margin-top: 15px;
-            font-size: 20px;
-        }
-    
-        &__text {
-            margin-top: 22px;
-            font-size: 13px;
-        }
-    
-        &__button-section {
-            margin-top: 61px;
-        }
-    }
-}
-
-@include breakpoints(sm) {
-    .coverage {
-        &__title-block {
+        @include breakpoints(sm) {
             width: 86%;
             flex-wrap: wrap;
-            margin: 0 auto;
+            margin: 0 auto;        
         }
+    }
 
-        &__title-yellow {
-            padding: 0 18px;
-            margin-left: 0px;
-        }
-
-        &__block {
-            width: 90%;
+    @include breakpoints(sm) {
+        &__button-section {
+            margin-top: 61px;
         }
     }
 }

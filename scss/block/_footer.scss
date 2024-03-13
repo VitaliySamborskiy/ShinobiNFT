@@ -1,6 +1,10 @@
 .footer {
     &__block-one {
         margin-top: 50px;
+
+        @include breakpoints (md) {
+            margin-top: 88px;
+        }
     }
 
     &__disclaimer-title {
@@ -8,6 +12,10 @@
         font-size: 40px;
         font-family: 'Raleway';
         font-weight: 300;
+
+        @include breakpoints (md) {
+            font-size: 30px;
+        }
     }
 
     &__disclaimer-text {
@@ -15,17 +23,58 @@
         margin-top: 15px;
         font-size: 20px;
         line-height: 1.2;
+
+        @include breakpoints (md) {
+            width: 75%;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        @include breakpoints(sm) {
+            width: 88%;
+            font-size: 11px;
+        }
     }
 
     &__block-two {
         display: flex;
         margin: 100px auto;
         width: 88%;
+
+        @include breakpoints(xl) {
+            width: 95%;
+        }
+        
+        @include breakpoints (md) {
+            width: 55%;
+            margin: 73px auto;        
+        }
+        
+        @include breakpoints(sm) {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 88%;            
+        }
     }
 
     &__contact-block {
         width: 17%; 
         margin-right: 120px;
+
+        @include breakpoints(xl) {
+            width: 21%; 
+            margin-right: 30px;
+        }
+        
+        @include breakpoints (md) {
+            width: 65%;
+            margin-right: 0;        
+        }
+        
+        @include breakpoints(sm) {
+            margin: 23px auto 0;
+            width: 95%;        
+        }
     }
 
     &__address {
@@ -33,6 +82,11 @@
         font-size: 16px;
         font-weight: 500;
         color: $footerText;
+
+        @include breakpoints (md) {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
     }
 
     &__bottom-button {
@@ -50,6 +104,13 @@
         grid-template-columns: repeat(auto-fill, minmax( 30%, 1fr));
         column-gap: 25px;
         row-gap: 13px;
+        
+        @include breakpoints (md) {
+            grid-template-columns: repeat(auto-fill, minmax( 35%, 1fr));
+            column-gap: 25px;
+            row-gap: 10px;
+            width: 85%;
+        }        
     }
 
     &__contact{
@@ -65,16 +126,44 @@
     &__contact{
     a:hover {
         color: $footerText;
+
+        @include breakpoints (md) {
+            @media (hover: hover) {
+                color: $accentuatingColor;
+            }
+        }
     }}
 
     &__items-block {
         display: flex;
         gap: 35px;
+
+        @include breakpoints(xl) {
+            gap: 30px;
+        }
+        
+        @include breakpoints (md) {
+            display: block;
+            gap: 0px;        
+        }
+        
+        @include breakpoints(sm) {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;        
+        }
     }
 
     &__items {
         width: 21%;
         gap: 8px;
+
+        @include breakpoints (md) {
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+            transition: height 0.5s ease-in;
+        }
     }
 
     &__item-title {
@@ -83,12 +172,29 @@
         font-weight: 600;
         pointer-events: none;
         line-height: 115%;
+
+        @include breakpoints (md) {
+            padding-bottom: 8px;
+            font-size: 18px;
+            pointer-events: fill;
+
+            @media (hover: hover) {
+                a:hover {
+                    color: $mainTitle;
+            }}
+        }
     }
 
     &__item {
         font-size: 18px;
         font-weight: 500;
         width: 120%;
+
+        @include breakpoints (md) {
+            margin: 0 auto;
+            font-size: 14px;
+            width: 90%;
+        }
     }
 
     &__item{
@@ -99,146 +205,17 @@
     &__item:hover {
     a {
         color: $accentuatingColor;
+
+        @include breakpoints (md) {
+            @media (hover: hover) {
+                color: $footerText;
+            }
+        }
     }}
-}
 
-@include breakpoints(xl) {
-    .footer {
-        &__block-two {
-            width: 95%;
-        }
-
-        &__contact-block {
-            width: 21%; 
-            margin-right: 30px;
-        }
-
-        &__items-block {
-            gap: 30px;
-        }
-    }
-}
-
-@include breakpoints (md) {
-    .footer {
-        &__block-one {
-            margin-top: 88px;
-        }
-    
-        &__disclaimer-title {
-            font-size: 30px;
-        }
-    
-        &__disclaimer-text {
-            width: 75%;
-            margin-top: 8px;
-            font-size: 15px;
-        }
-    
-        &__block-two {
-            width: 55%;
-            margin: 73px auto;
-        }
-    
-        &__contact-block {
-            width: 65%;
-            margin-right: 0;
-        }
-    
-        &__address {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
+    @include breakpoints (md) {
         &__svg {
             display: none;
-        }
-    
-        &__contacts-list {
-            grid-template-columns: repeat(auto-fill, minmax( 35%, 1fr));
-            column-gap: 25px;
-            row-gap: 10px;
-            width: 85%;
-        }
-    
-        &__items-block {
-            display: block;
-            gap: 0px;
-        }
-    
-        &__items {
-            width: 100%;
-            height: 40px;
-            overflow: hidden;
-            transition: height 0.5s ease-in;
-        }
-
-        &__items_active {
-            height: 70%;
-        }
-    
-        &__item-title {
-            padding-bottom: 8px;
-            font-size: 18px;
-            pointer-events: fill;
-        }
-    
-        &__item {
-            margin: 0 auto;
-            font-size: 14px;
-            width: 90%;
-        }
-
-        @media (hover: hover) {
-            &__item:hover {
-                a {
-                    color: $footerText;
-            }}
-            
-            &__contact{
-                a:hover {
-                    color: $accentuatingColor;
-            }}
-
-            &__item-title {
-                a:hover {
-                    color: $mainTitle;
-            }}
-        }
-    }
-}
-
-@include breakpoints(sm) {
-    .footer{
-        &__disclaimer-text {
-            width: 88%;
-            font-size: 11px;
-        }
-
-        &__block-two {
-            display: flex;
-            flex-direction: column-reverse;
-            width: 88%;
-        }
-
-        &__items-block {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        // &__items {
-        //     height: 40px;
-        //     transition: all 0.5s ease-in;
-        // }
-
-        // &__items_active {
-        //     height: 70%;
-        // }
-
-        &__contact-block {
-            margin: 23px auto 0;
-            width: 95%;
         }
     }
 }

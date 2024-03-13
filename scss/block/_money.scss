@@ -3,20 +3,64 @@
         background-color: $burgerBackground;
         width: 100%;
         clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+
+        @include breakpoints(sm) {
+            clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
+        }
     }
 
     &__container {
         padding-top: 296px;
         margin: 0 55px 63px; 
         width: 85%;
+
+        @include breakpoints(xl) {
+            padding-top: 171px;
+            margin: 0 auto 66px;
+            width: 95%;
+        }
+        
+        @include breakpoints(md) {
+            padding-top: 141px;
+            margin: 88px auto 54px; 
+            width: 65%;        
+        }
+        
+        @include breakpoints(sm) {
+            flex-wrap: wrap;
+            padding-top: 105px;
+            margin: 90px auto 54px; 
+            width: 95%;
+            gap: 52px;            
+        }
     }
 
     &__item {
-        width: 410px;      
+        width: 410px;
+        
+        @include breakpoints(xl) {
+            width: 42%;
+        }
+        
+        @include breakpoints(md) {
+            width: 45%;        
+        }
+        
+        @include breakpoints(sm) {
+            margin: 0 auto;
+            padding-right: 60px;
+            width: 40%;
+            min-width: 270px;         
+        }
     }
 
     &__title {
-        margin-top: 25px;        
+        margin-top: 25px; 
+        
+        @include breakpoints(md) {
+            margin-top: 34px;
+            font-size: 40px; 
+        }
     }
 
     &__text {
@@ -25,94 +69,31 @@
         font-family: 'Raleway-italic';
         border-bottom: 2px solid $accentuatingColor;
         display: inline;
+
+        @include breakpoints(md) {
+            font-size: 20px;
+            border-bottom: 1px solid $accentuatingColor;
+        }
     }
 
     &__bottom-button {
         margin: 12px !important;
     }
 
-    &__registration:hover {
-        background: $burgerBackground;
-    }
-}
-
-@include breakpoints(xl) {
-    .money {    
-        &__container {
-            padding-top: 171px;
-            margin: 0 auto 66px;
-            width: 95%;
-        }
-    
-        &__item {
-            width: 42%;      
-        }
-    }
-}
-
-@include breakpoints(md) {
-    .money {    
-        &__container {
-            padding-top: 141px;
-            margin: 88px auto 54px; 
-            width: 65%;
-        }
-    
-        &__item {
-            width: 45%;       
-        }
-    
-        &__title {
-            margin-top: 30px;
-            font-size: 40px;       
-        }
-    
-        &__text {
-            font-size: 20px;
-            border-bottom: 1px solid $accentuatingColor;
-        }
-
+    @include breakpoints(md) {
         &__registration {
             display: block !important;
         }
+    }
 
-        @media (hover: hover) {
-            &__registration:hover {
+    &__registration:hover {
+        background: $burgerBackground;
+
+        @include breakpoints(md) {
+            @media (hover: hover) {
                 background-color: $accentuatingColor;
                 color: $mainBackground;
             }
-        }
-    }
-}
-
-@include breakpoints(sm) {
-    .money {    
-        &__background{
-            clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
-        }
-
-        &__container {
-            flex-wrap: wrap;
-            padding-top: 105px;
-            margin: 90px auto 54px; 
-            width: 95%;
-            gap: 52px;
-        }
-    
-        &__item {
-            margin: 0 auto;
-            padding-right: 60px;
-            width: 40%;
-            min-width: 270px;    
-        }
-    
-        &__title {
-            margin-top: 34px;
-            font-size: 40px;       
-        }
-    
-        &__text {
-            font-size: 20px;
-        }
+        } 
     }
 }

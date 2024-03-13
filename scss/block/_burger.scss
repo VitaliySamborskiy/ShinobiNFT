@@ -1,6 +1,10 @@
 .burger-menu {
     display: none;
 
+    @include  breakpoints(md) {
+        display: flex;
+    }
+
     &_active {
         opacity: 1;
         left: 0;
@@ -97,6 +101,11 @@
         background: $MainInfoBorder;
         box-shadow: 0 4px 15px 0 $boxShadow;
         transition: all 0.8s ease-in-out;
+
+        @include breakpoints (sm) {
+            width: 50%;
+            min-width: 290px;
+        }
     }
 
     &__body-background_active {
@@ -153,19 +162,4 @@
 
 .look {
     overflow: hidden;
-}
-
-@include  breakpoints(md) {
-    .burger-menu {
-        display: flex;
-    }
-}
-
-@include breakpoints (sm) {
-    .burger-menu {
-        &__body-background {
-            width: 50%;
-            min-width: 290px;
-        }
-    }
 }

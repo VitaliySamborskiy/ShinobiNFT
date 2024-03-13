@@ -3,17 +3,42 @@
         margin: 73px auto 0;
         width: 1030px;
         transition: all 0.8s ease-in-out 0.3s;
+
+        @include breakpoints(xl) {
+            width: 95%;
+        }
+        
+        @include breakpoints (md) {
+            width: 80%;
+            margin: 30px auto 0;        
+        }
+        
+        @include breakpoints(sm) {
+            width: 90%;            
+        }
     }
 
     &__title {
         font-size: 60px;
         font-weight: 700;
         font-family: "Orbitron", sans-serif;
+
+        @include breakpoints(xl) {
+            width: 95%;
+        }
+        
+        @include breakpoints (md) {
+            font-size: 30px;        
+        }
     }
 
     &__title-accent {
         font-size: 80px;
         color: $accentuatingColor;
+
+        @include breakpoints (md) {
+            font-size: 40px;            
+        }
     }
 
     &__support-title {
@@ -21,6 +46,15 @@
         font-size: 30px;
         font-weight: 600;
         font-family: 'Raleway';
+
+        @include breakpoints (md) {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        
+        @include breakpoints(sm) {
+            margin-top: 15px;
+        }
     }
 
     &__block-text {
@@ -34,68 +68,19 @@
         font-family: 'Raleway';
         border-radius: 20px;
         box-shadow: 0 4px 15px 0 $boxShadow;
-    }
-}
 
-@include breakpoints(xl) {
-    .main-page {
-        &__content {
-            width: 95%;
-        }
-    
-        &__title {
-           width: 95%;
-    
-        }
-    }
-}
-
-
-@include breakpoints (md) {
-    .main-page {
-        &__content {
-            width: 80%;
-            margin: 30px auto 0;
-        }
-    
-        &__title {
-            font-size: 30px;
-        }
-    
-        &__title-accent {
-            font-size: 40px;
-        }
-    
-        &__support-title {
-            margin-top: 10px;
-            font-size: 15px;
-        }
-    
-        &__block-text {
+        @include breakpoints (md) {
             width: 226px;
             padding: 12px 0;
             margin: 26px auto 42px;
             font-size: 15px;
         }
-    }  
-}
-
-@include breakpoints(sm) {
-    .main-page{
-        &__content {
-            width: 90%;
-        }
-    
-        &__support-title {
-            margin-top: 10px;
-            font-size: 15px;
-        }
-    
-        &__block-text {
+        
+        @include breakpoints(sm) {
             width: 180px;
             padding: 12px 0;
             margin: 26px auto 36px;
-            font-size: 13px;
+            font-size: 13px;        
         }
     }
 }

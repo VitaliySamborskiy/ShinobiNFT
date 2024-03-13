@@ -1,16 +1,55 @@
 .swiper-section {
     &__container {
         margin-top: 126px;
+
+        @include breakpoints(xl) {
+            margin-top: 80px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 50px;    
+        }
     }
 
     &__title {
         text-align: center;
+
+        @include breakpoints(xl) {
+            font-size: 65px;
+        }
+
+        @include breakpoints(md) {
+            font-size: 30px;
+            width: 30%;
+            margin: 0 auto;    
+        }
+
+        @include breakpoints(sm) {
+            width: 60%;
+            margin: 0 35px;            
+        }
     }
 
     &__block {
         margin-top: 95px;
         width: 109%;
         transform: translateX(-1%);
+
+        @include breakpoints(xl) {
+            width: 120%;
+            transform: translate(-7%);
+        }
+
+        @include breakpoints(md) {
+            margin-top: 54px;
+            width: 130%;
+            transform: translate(-10%);    
+        }
+        
+        @include breakpoints(sm) {
+            width: 189%;
+            transform: translate(-21%);            
+        }
     }
 
     &__hidden {
@@ -21,6 +60,18 @@
     &__slide {
         width: 83%;
         margin-top: 50px;
+
+        @include breakpoints(xl) {
+            width: 86%;
+            margin-top: 35px;
+        }
+        @include breakpoints(md) {
+            width: 88%;
+            margin-top: 28px;    
+        }
+        @include breakpoints(sm) {
+            width: 85%;                        
+        }
     }
 
     &__bottom-button {
@@ -30,6 +81,11 @@
 
 .swiper {
     aspect-ratio: 16 / 3.6;
+
+    @include breakpoints(sm) {
+        aspect-ratio: 16 / 3.8;        
+    }
+
     &-wrapper{
         align-items: center;
         width: 100%;
@@ -38,105 +94,34 @@
     &__slide {
         margin-top: 40px;
         width: 88%;
+
+        @include breakpoints(xl) {
+            margin-top: 0px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 0px;
+            width: 100%;    
+        }
     }
     
     &-slide-active {
         transform: scale(1.24)!important;
         transition: 0.5s;
         margin-left: 30px;
-    }
-}
 
-@include breakpoints(xl) {
-    .swiper-section {
-        &__container {
-            margin-top: 80px;
-        }
-
-        &__title {
-            font-size: 65px;
-        }
-
-        &__block {
-            width: 120%;
-            transform: translate(-7%);
-        }
-        
-        &__slide {
-            width: 86%;
-            margin-top: 35px;
-        }
-    }
-    
-    .swiper {  
-        &__slide {
-            margin-top: 0px;
-        }
-        
-        &-slide-active {
+        @include breakpoints(xl) {
+            transform: scale(1.14)!important;
             margin-left: 20px;
         }
-    }
-}
 
-@include breakpoints(md) {
-    .swiper-section {
-        &__container {
-            margin-top: 50px;
-        }
-
-        &__title {
-            font-size: 30px;
-            width: 30%;
-            margin: 0 auto;
-        }
-
-        &__block {
-            margin-top: 54px;
-            width: 130%;
-            transform: translate(-10%);
-        }
-        
-        &__slide {
-            width: 88%;
-            margin-top: 28px;
-        }
-    }
-    
-    .swiper {
-        &__slide {
-            margin-top: 0px;
-            width: 100%;
-        }
-        
-        &-slide-active {
+        @include breakpoints(md) {
             transform: scale(1.1)!important;
-            margin-left: 10px;
-        }
-    }
-}
-
-@include breakpoints(sm) {
-    .swiper-section {
-        &__title {
-            width: 60%;
-            margin: 0 35px;
+            margin-left: 10px;    
         }
 
-        &__block {
-            width: 189%;
-            transform: translate(-21%);
+        @include breakpoints(sm) {
+            transform: scale(1.20)!important;            
         }
-        
-        &__slide {
-            width: 85%;
-        }
-    }
-    
-    .swiper {
-        aspect-ratio: 16 / 3.7;
-        &-slide-active {
-            transform: scale(1.20)!important;
-        }
-    }
+    } 
 }
